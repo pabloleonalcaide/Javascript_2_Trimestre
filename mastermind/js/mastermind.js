@@ -12,7 +12,15 @@ mastermind = {
  * check if user hits the pay
  */
 	checkLine : function(array){
-
+		copyTarget = mastermind.target.slice();
+		iguales = 0;
+		for(let i=0;i<copyTarget.length;i++){
+			for(let j=0;j<copyTarget.length;j++){
+				if(copyTarget[i]==array[j])
+					iguales++;
+			}
+		}
+		return iguales + "coincidencias";
 	},
 /**
  * Shows the combination
@@ -28,6 +36,6 @@ mastermind = {
 			let color = mastermind.colour[Math.floor(Math.random() * (3 - 0)) + 0];
 			mastermind.target[i] = color;
 		}
-	}
-
-}
+	},
+	
+};
