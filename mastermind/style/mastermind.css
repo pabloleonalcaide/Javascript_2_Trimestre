@@ -1,0 +1,36 @@
+body{
+
+}
+h1{
+	text-align: center;
+}
+#container {
+		margin: 10px auto;
+		width:50%;
+		height: 400px;
+}
+form{
+	display: inline-block;
+	height: 100%
+}
+#container ul{
+	list-style: none;
+	display: inline-block;
+}
+#container ul li{
+
+}
+#container ul li input{
+	border-radius: 50px;
+	width: 30px;
+	height: 30px;
+}
+
+#cRojo{background-color: red;}
+#cAzul{background-color: blue;}
+#cVerde{background-color: green;}
+#cAmarillo{background-color: yellow;}
+#cNaranja{background-color: orange;}
+#cMorado{background-color: purple;}
+#cNegro{background-color: black;}
+#cBlanco{background-color: white;}
