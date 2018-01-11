@@ -7,30 +7,89 @@
 	<link rel="stylesheet" href="./style/normalize.css">
 	<link rel="stylesheet" href="./style/mastermind.css">
 	<script src="./js/mastermind.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="./js/boardGame.js" type="text/javascript" charset="utf-8" async defer></script>
+
 </head>
 <body>
 <h1>MasterMind - Pablo Leon</h1>
-<ul>
-	<li> <b>mastermind.init()</b> : genera la combinación de la máquina (Necesario para hacer la comprobación) </li>
-	<li> <b>mastermind.showTarget()</b> : muestra la combinación de la máquina (para las pruebas) </li>
-	<li> <b>mastermind.checkLine(Array)</b> : comprueba el array pasado como argumento con la combinación de la máquina </li>
-	<li>     Ej: mastermind.checkLine(["naranja","naranja","verde","verde"])</li>
-</ul>
+
 	<div id=container>
 	<form>
 		<fieldset>
-			<input type="button" name="" value="comprobar" id="submit">
-	<ul> 
-		<li><input type="button" id="cRojo"></li>
-		<li><input type="button" id="cAzul"></li>
-		<li><input type="button" id="cAmarillo"></li>
-		<li><input type="button" id="cVerde"></li>
-		<li><input type="button" id="cNaranja"></li>
-		<li><input type="button" id="cMorado"></li>
-		<li><input type="button" id="cBlanco"></li>
-		<li><input type="button" id="cNegro"></li>
-	</ul>
+			<ul class="round">
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+			</ul>
+			<ul class="round">
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+			</ul>
+			<ul class="round">
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+			</ul>
+			<ul class="round">
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+			</ul>
+			<ul class="round">
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+			</ul>
+			<ul class="round">
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+			</ul>
+			<ul class="round">
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+			</ul>
+			<ul class="round">
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+			</ul>
+			<ul class="round">
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+			</ul>
+
 		</fieldset>
+		<div><ul id="listColor"> 
+			<li><input type="button" id="cRojo"></li>
+			<li><input type="button" id="cAzul"></li>
+			<li><input type="button" id="cAmarillo"></li>
+			<li><input type="button" id="cVerde"></li>
+			<li><input type="button" id="cNaranja"></li>
+			<li><input type="button" id="cMorado"></li>
+			<li><input type="button" id="cBlanco"></li>
+			<li><input type="button" id="cNegro"></li>
+		</ul>			
+		<ul class="round">
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+				<li><input type="button" disabled class="cEmpty"></li>
+			</ul>
+		<input type="button" name="" value="comprobar" id="submit">
+		</div>
 	</form>
 	</div>
 </body>

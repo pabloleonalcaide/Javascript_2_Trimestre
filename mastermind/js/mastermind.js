@@ -16,22 +16,23 @@ mastermind =(function() {
 	    enTablero = 0;
 	    enSuSitio = 0;
 		copyArray = target.slice();
-   
+   		checked = [];
         copyArray.forEach(function(elementoPredefinido, i) {
           array.forEach(function(elementoUsuario, j) {
              if (elementoUsuario == elementoPredefinido) {
              	if (i == j) {
                 	enSuSitio++;
-                  	elementoPredefinido = undefined;
+ 		            array.splice(j,1);
+                	copyArray.splice(i,1);
                 }else{
-                	enTablero++;
-                	elementoUsuario = undefined;
+ 		            enTablero++;
+ 		            array.splice(j,1);
                 }
              }
            });              
          });
-        console.log("Blancas: " + enTablero); // mostrarBlancas()
-        console.log("Negras: " +   enSuSitio); //mostrarNegras()
+        console.log("Blancas: " + enTablero); 
+        console.log("Negras: " +   enSuSitio);
 	}
 /**
  * Shows the combination
@@ -44,7 +45,7 @@ mastermind =(function() {
  */
 	generateTarget = function(){
 		for (let i = 0; i<4; i++) {
-			let color = colour[Math.floor(Math.random() * (3 - 0)) + 0];
+			let color = colour[Math.floor(Math.random() * (7 - 0)) + 0];
 			target[i] = color;
 		}
 	}

@@ -7,15 +7,15 @@ h1{
 #container {
 		margin: 10px auto;
 		width:50%;
-		height: 400px;
+		
 }
 form{
-	display: inline-block;
+	display: grid;
+	grid-template-columns: 50% 50%;
 	height: 100%
 }
 #container ul{
 	list-style: none;
-	display: inline-block;
 }
 #container ul li{
 
@@ -26,7 +26,6 @@ form{
 	height: 30px;
 }
 
-
 #cRojo{background-color: red;}
 #cAzul{background-color: blue;}
 #cVerde{background-color: green;}
@@ -35,3 +34,17 @@ form{
 #cMorado{background-color: purple;}
 #cNegro{background-color: black;}
 #cBlanco{background-color: white;}
+.round{
+	display: block;
+	width:100%;
+}
+.round > li{
+	display: inline;
+}
+.cEmpty{
+	border:1px solid black;
+}
+#submit{
+	display: inline-block;
+
+}
