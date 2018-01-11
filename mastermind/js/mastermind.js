@@ -8,7 +8,7 @@ mastermind =(function() {
 	init = function(){
 		generateTarget();
 	}
-	
+
 /**
  * check if user hits the pay
  */
