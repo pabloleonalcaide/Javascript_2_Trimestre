@@ -1,3 +1,6 @@
+/**
+* Pablo Leon Alcaide
+*/
 // Colours
 red = document.getElementById("cRojo");
 blue = document.getElementById("cAzul");

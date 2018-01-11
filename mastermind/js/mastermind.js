@@ -1,3 +1,4 @@
+//Mastermind - Pablo Leon Alcaide
 mastermind =(function() {
 	target = [],
 	colour = ["azul","verde","naranja","amarillo","blanco","negro","rojo","morado"],
