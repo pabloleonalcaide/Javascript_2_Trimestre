@@ -1,41 +1,59 @@
-mastermind = {
-	target : [],
-	colour : ["azul","verde","naranja","amarillo"],
+//Mastermind - Pablo Leon Alcaide
+mastermind =(function() {
+	target = [],
+	colour = ["azul","verde","naranja","amarillo","blanco","negro","rojo","morado"],
 
 /**
  * init the game by generating a new combination
  */
-	init : function(){
-		mastermind.generateTarget();
-	},
+	init = function(){
+		generateTarget();
+		showTarget();
+	}
+
 /**
  * check if user hits the pay
  */
-	checkLine : function(array){
-		copyTarget = mastermind.target.slice();
-		iguales = 0;
-		for(let i=0;i<copyTarget.length;i++){
-			for(let j=0;j<copyTarget.length;j++){
-				if(copyTarget[i]==array[j])
-					iguales++;
-			}
-		}
-		return iguales + "coincidencias";
-	},
+	checkLine = function(array){
+	    enTablero = 0;
+	    enSuSitio = 0;
+		copyArray = target.slice();
+   		checked = [];
+        copyArray.forEach(function(elementoPredefinido, j) {
+        	array.forEach(function(elementoUsuario, i) {
+             if (elementoUsuario == elementoPredefinido) {
+             	if (i == j) {
+                	enSuSitio++;
+                	copyArray[j] = undefined;
+                }else{
+ 		            enTablero++;
+ 		            copyArray[j] = undefined;
+                }
+             }
+           });              
+         });
+        console.log("Blancas: " + enTablero); 
+        console.log("Negras: " +   enSuSitio);
+	}
 /**
  * Shows the combination
  */
-	showTarget : function(){
-		return mastermind.target;
-	},
+	showTarget = function(){
+		return target;
+	}
 /**
  * Generate a new combination
  */
-	generateTarget : function(){
+	generateTarget = function(){
 		for (let i = 0; i<4; i++) {
-			let color = mastermind.colour[Math.floor(Math.random() * (3 - 0)) + 0];
-			mastermind.target[i] = color;
+			let color = colour[Math.floor(Math.random() * (7 - 0)) + 0];
+			target[i] = color;
 		}
-	},
-	
-};
+	}
+	/* Public*/
+	return{
+		init:init,
+		checkLine: checkLine,
+		showTarget: showTarget
+	};
+}());

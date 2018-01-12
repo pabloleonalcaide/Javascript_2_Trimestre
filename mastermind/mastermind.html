@@ -2,12 +2,49 @@
 <html>
 <head>
 	<meta charset="utf-8">
-
 	<title>Mastermind - Pablo Leon</title>
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="./style/normalize.css">
+	<link rel="stylesheet" href="./style/mastermind.css">
+	<meta name="author" content="pablo leon">
 	<script src="./js/mastermind.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="./js/boardGame.js" type="text/javascript" charset="utf-8" async defer></script>
+
 </head>
 <body>
-	
+<h1>MasterMind - Pablo Leon</h1>
+
+	<div id=container>
+	<form>
+		<fieldset>
+
+			<ul class="round" id="round1">
+				<li><input type="button" class="cEmpty"></li>
+				<li><input type="button" class="cEmpty"></li>
+				<li><input type="button" class="cEmpty"></li>
+				<li><input type="button" class="cEmpty"></li>
+			</ul>
+
+		</fieldset>
+		<ul class="resultList">
+			<li><input type="button" disabled class="result"></li>
+			<li><input type="button" disabled class="result"></li>
+			<li><input type="button" disabled class="result"></li>
+			<li><input type="button" disabled class="result"></li>
+		</ul>
+
+		<div><ul id="listColor"> 
+			<li><input type="button" id="cRojo"></li>
+			<li><input type="button" id="cAzul"></li>
+			<li><input type="button" id="cAmarillo"></li>
+			<li><input type="button" id="cVerde"></li>
+			<li><input type="button" id="cNaranja"></li>
+			<li><input type="button" id="cMorado"></li>
+			<li><input type="button" id="cBlanco"></li>
+			<li><input type="button" id="cNegro"></li>
+		</ul>			
+		<input type="button" name="submit" value="comprobar" id="submit">
+		</div>
+	</form>
+	</div>
 </body>
 </html>
