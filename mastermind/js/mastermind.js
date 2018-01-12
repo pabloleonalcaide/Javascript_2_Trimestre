@@ -8,6 +8,7 @@ mastermind =(function() {
  */
 	init = function(){
 		generateTarget();
+		showTarget();
 	}
 
 /**
@@ -18,16 +19,15 @@ mastermind =(function() {
 	    enSuSitio = 0;
 		copyArray = target.slice();
    		checked = [];
-        copyArray.forEach(function(elementoPredefinido, i) {
-          array.forEach(function(elementoUsuario, j) {
+        copyArray.forEach(function(elementoPredefinido, j) {
+        	array.forEach(function(elementoUsuario, i) {
              if (elementoUsuario == elementoPredefinido) {
              	if (i == j) {
                 	enSuSitio++;
- 		            array.splice(j,1);
-                	copyArray.splice(i,1);
+                	copyArray[j] = undefined;
                 }else{
  		            enTablero++;
- 		            array.splice(j,1);
+ 		            copyArray[j] = undefined;
                 }
              }
            });              
