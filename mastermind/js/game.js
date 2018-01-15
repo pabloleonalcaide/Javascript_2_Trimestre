@@ -1,5 +1,6 @@
 /**
  * @author Pablo Leon Alcaide
+ * @verson 1.2
  */
 {
     let colores;
@@ -19,6 +20,7 @@
     let insertCircle = function () {
         for (let i = 0; i < circlesToFill.length; i++) { 
             //check where is the first empty space
+
             if (circlesToFill[i].style.backgroundColor == "transparent" || circlesToFill[i].style.backgroundColor == "" || 
                 circlesToFill[i].style.backgroundColor == "none" ) {
             switch (this.id) {

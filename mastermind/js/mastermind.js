@@ -1,4 +1,7 @@
-//Mastermind - Pablo Leon Alcaide
+/**
+ * Mastermind
+ * @author Pablo Leon Alcaide
+ */
 mastermind = (function () {
     let colours = ["azul","verde","naranja","amarillo","blanco","negro","rojo","marron"];
     let displaced;
