@@ -49,6 +49,7 @@
      * Create a new row 
      */
     let generateNewLine = ()=> {
+        removeCleanEvent();
         let newRow = document.createElement("div");
         newRow.id = "newRow";
         let rowCirclesToFill = document.createElement("div");
@@ -143,6 +144,7 @@
         init();
         popUpWinner.style = "display: none;"
     }
+    /** remove the Clean event in the previous row */
      let removeCleanEvent = function () {
         for (let i = 0; i < circlesToFill.length; i++) {
             circlesToFill[i].removeEventListener("click", clean);
