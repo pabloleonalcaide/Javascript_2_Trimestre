@@ -17,27 +17,33 @@
      * Insert a color into the row if there is space
      */
     let insertCircle = function () {
-        if (counter < 4) {
+        for (let i = 0; i < circlesToFill.length; i++) { 
+            //check where is the first empty space
+            if (circlesToFill[i].style.backgroundColor == "transparent" || circlesToFill[i].style.backgroundColor == "" || 
+                circlesToFill[i].style.backgroundColor == "none" ) {
             switch (this.id) {
                 case "redCircle":
-                    circlesToFill[counter].style = "background-color: red;"; break;
+                    circlesToFill[i].style = "background-color: red;"; break;
                 case "greenCircle":
-                    circlesToFill[counter].style = "background-color: green;"; break;
+                    circlesToFill[i].style = "background-color: green;"; break;
                 case "blueCircle":
-                    circlesToFill[counter].style = "background-color: blue;"; break;
+                    circlesToFill[i].style = "background-color: blue;"; break;
                 case "yellowCircle":
-                    circlesToFill[counter].style = "background-color: yellow;"; break;
+                    circlesToFill[i].style = "background-color: yellow;"; break;
                 case "brownCircle":
-                    circlesToFill[counter].style = "background-color: brown;"; break;
+                    circlesToFill[i].style = "background-color: brown;"; break;
                 case "orangeCircle":
-                    circlesToFill[counter].style = "background-color: orange;"; break;
+                    circlesToFill[i].style = "background-color: orange;"; break;
                 case "whiteCircle":
-                    circlesToFill[counter].style = "background-color: white;"; break;
+                    circlesToFill[i].style = "background-color: white;"; break;
                 case "blackCircle":
-                    circlesToFill[counter].style = "background-color: black;"; break;
+                    circlesToFill[i].style = "background-color: black;"; break;
             }
+             circlesToFill[i].addEventListener("click", clean);
+             break;
         }
         counter++;
+        }
     }
     /**
      * Create a new row 
@@ -127,12 +133,21 @@
             playPanel.scrollTo(0, 0)
         }
     }
-
+    /** clean a painted circle */
+    let clean = function () {
+        this.style = "background-color: transparent;";
+        this.removeEventListener("click", clean);
+    }
     /** restart the game*/
     let reset = ()=> {
         init();
         popUpWinner.style = "display: none;"
     }
+     let removeCleanEvent = function () {
+        for (let i = 0; i < circlesToFill.length; i++) {
+            circlesToFill[i].removeEventListener("click", clean);
+        }
+}
     /** start a new game */
     let init =  ()=> {
         mastermind.init();

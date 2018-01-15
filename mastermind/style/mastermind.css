@@ -125,7 +125,14 @@ main {
 #winPanel {
     display: none;
     background: 
-    linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2)), url("../images/bg.jpg");    width: 50%;
+    -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
+    url("../images/bg.jpg");
+    background: 
+    -o-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
+    url("../images/bg.jpg");
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
+    url("../images/bg.jpg");    width: 50%;
     height: 900px;
     border-radius: 25px;
     position: absolute;
