@@ -1,59 +1,67 @@
 //Mastermind - Pablo Leon Alcaide
-mastermind =(function() {
-	target = [],
-	colour = ["azul","verde","naranja","amarillo","blanco","negro","rojo","morado"],
+mastermind = (function () {
+    let colours = ["azul","verde","naranja","amarillo","blanco","negro","rojo","marron"];
+    let displaced;
+    let inSite;
+    let target = [];
 
 /**
  * init the game by generating a new combination
  */
-	init = function(){
-		generateTarget();
-		showTarget();
-	}
+    let init = function () {
+        generateTarget();
+    }
 
 /**
- * check if user hits the pay
+ * check if user hits the play
  */
-	checkLine = function(array){
-	    enTablero = 0;
-	    enSuSitio = 0;
-		copyArray = target.slice();
-   		checked = [];
-        copyArray.forEach(function(elementoPredefinido, j) {
-        	array.forEach(function(elementoUsuario, i) {
-             if (elementoUsuario == elementoPredefinido) {
-             	if (i == j) {
-                	enSuSitio++;
-                	copyArray[j] = undefined;
-                }else{
- 		            enTablero++;
- 		            copyArray[j] = undefined;
-                }
-             }
-           });              
-         });
-        console.log("Blancas: " + enTablero); 
-        console.log("Negras: " +   enSuSitio);
-	}
+    let checkLine = function (array) {
+        let copyArray = target.slice();
+        displaced = 0;
+        inSite = 0;
+
+        array.forEach(function (element, index) {
+            if (element == copyArray[index]) {
+                copyArray[index] = undefined;
+                array[index] = 1;
+                inSite++;
+            }
+        });
+
+        array.forEach(function (element, index) {
+            if (copyArray.indexOf(array[index]) != -1) {
+                displaced++;
+            }
+        });
+
+        return {
+            copyArray: copyArray,
+            array: array,
+            inSite: inSite,
+            displaced: displaced
+        }
+    }
+
 /**
  * Shows the combination
  */
-	showTarget = function(){
-		return target;
-	}
+    let showTarget = function () {
+        console.log(target);
+    }
 /**
  * Generate a new combination
  */
-	generateTarget = function(){
-		for (let i = 0; i<4; i++) {
-			let color = colour[Math.floor(Math.random() * (7 - 0)) + 0];
-			target[i] = color;
-		}
-	}
-	/* Public*/
-	return{
-		init:init,
-		checkLine: checkLine,
-		showTarget: showTarget
-	};
-}());
+    let generateTarget = function () {
+        target = [];
+        for (let i = 0; i < 4; i++) {
+            target.push(colours[Math.floor(Math.random() * (7 - 0)) + 0]);
+        }
+    }
+
+    /* Public*/
+    return {
+        init: init,
+        showTarget: showTarget,
+        checkLine: checkLine
+    };
+})();
