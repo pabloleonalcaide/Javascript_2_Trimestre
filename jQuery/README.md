@@ -17,6 +17,7 @@ Ejercicios de jQuery del manual de desarrolloweb.com
 * 1.10 jQuery CDN o hosting local de las librerías
 
 ---
+### Funciones con jQuery
 
 * 2.2 Función jQuery
 * 2.3 Otros usos de la función $()
@@ -25,3 +26,12 @@ Ejercicios de jQuery del manual de desarrolloweb.com
 	* pasando una función
 * 2.4 Core/each: each del core de jQuery
 * 2.5 Método size() y propiedad length del core de jQuery
+	* _En el manual se  utilizaba la función size() que está deprecated desde la versión 1.8 de jQuery, por lo que fue omitida_
+* 2.6 Método data() Core jQuery
+* 2.7 Consideraciones interesantes de data() y removeData()
+
+---
+### Selectores
+
+* 3.2 Selectores en jQuery
+* 3.3 Selectores de jerarquía
