@@ -1,0 +1,21 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <title>Pablo Leon - Trabajando con el objeto evento</title>
+    <script src="../jquery-3.2.1.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(document).click(function(e) {
+        	//recogemos la posicion en la página donde se disparó el evento e
+            alert("X: " + e.pageX + " - Y: " + e.pageY)
+        });
+    })
+    </script>
+</head>
+
+<body>
+    <h1>Trabajando con el objeto evento</h1> Haz clic en cualquier parte de la página...
+</body>
+
+</html>

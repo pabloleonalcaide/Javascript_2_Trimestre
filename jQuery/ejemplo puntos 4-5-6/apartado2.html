@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Pablo Leon - Apartado 2</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="../jquery-3.2.1.js" type="text/javascript"></script>
+
+        <script>
+        	$(document).ready(function(){
+
+        		let inputs = $("input");
+        		let checked;
+
+        		inputs.each(function(index) {
+        			$(this).change(function() { //cuando cambia su valor
+        				if($(this).prop("checked")) {
+                        $(this).parent("p").css("color","red");
+                            checked=index; 
+                            inputs.each(function(index) { 
+                                if(index!=checked)  //identificamos el resto de inputs
+                                    $(this).prop("disabled",true);
+		        			});
+        				}
+        				else {
+                            $(this).parent("p").css("color","black");
+        					inputs.each(function(index) { 
+			        			if(index!=checked) 
+			        				$(this).prop("disabled",false); 
+	        				});
+        				}	
+        			});
+        		});
+			});
+        </script>
+
+    </head>  
+
+    <body>
+    <h1>Deshabilitando checkbox</h1>
+    	<div id="inputs">
+	    	<p>Pulsa un checkbox, yo deshabilito el resto</p>
+            <p>Checkbox 1<input type="checkbox" name="checkbox1"></p>
+	    	<p>Checkbox 2<input type="checkbox" name="checkbox2"></p>
+	    	<p>Checkbox 3<input type="checkbox" name="checkbox3"></p>
+	    </div>
+    <br><a id="volver" href="./ejemplo_puntos_4-5-6.html"> Volver</a>
+    </body>
+
+</html>

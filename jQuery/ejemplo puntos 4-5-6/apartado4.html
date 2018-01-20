@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Pablo Leon - Apartado 4</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="../jquery-3.2.1.js" type="text/javascript"></script>
+        <script>
+        	$(document).ready(function(){
+
+        	   $("#button").click(function(event) {
+                   $("div").html(
+                        "<p><b>Valor de pageX:</b> " + event.pageX + "</p>" +
+                        "<p><b>Valor de pageY:</b> " + event.pageY + "</p>" +
+                        "<p><b>Tipo de currentTarget:</b> " + event.currentTarget + "</p>" +
+                        "<p><b>Estimación timeStamp:</b> " + event.timeStamp + "</p>" +
+                        "<p><b>Valor de isDefaultPrevented:</b> " + event.isDefaultPrevented + "</p>" +
+                        "<p><b>Valor de type:</b> " + event.type + "</p>"
+                    );
+               });
+
+			});
+        </script>
+
+    </head>  
+
+    <body>
+
+    	<button id="button" class="ejemplos">
+	    	Click aquí
+	    </button>
+            <p><b>Información:</b></p>
+        <div id="apartado4">
+        </div>
+
+    </body>
+ <br><a id="volver" href="./ejemplo_puntos_4-5-6.html"> Volver</a>
+</html>

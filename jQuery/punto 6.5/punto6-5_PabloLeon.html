@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pablo Leon - Trabajando con eventos de teclado en jQuery</title>
+    <script src="../jquery-3.2.1.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#mitexto").keypress(function(e) { //el evento se dispara al presionar una tecla sin importar si es liberada o no
+            e.preventDefault();
+            $("#loescrito").html(e.which + ": " + String.fromCharCode(e.which)) //convertimos de unicode a caracter normal (e.which nos indica cual fue la tecla que lo disparó)
+        });
+    })
+    </script>
+</head>
+
+<body>
+    <h1>Eventos de teclado en jQuery</h1>
+    <h2>Averiguar qué tecla se está pulsando</h2>
+    <form>
+        <textarea cols=300 rows=2 id="mitexto">Escribe algo aquí!</textarea>
+        <br>
+        <b>Tecla pulsada:</b>
+        <br>
+        <div id="loescrito"></div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Ejemplo 3. Antonio León Alcaide</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="../jquery-3.2.1.js" type="text/javascript"></script>
+
+        <script>
+        	$(document).ready(function(){
+
+        	   $("div").bind("click", function() {
+                    $("div").css("background","blue");
+                    $("div").css("color","white");
+               });
+               $("div").bind("mouseleave dblclick", function() {
+                    $("div").css("color","black");
+                    $("div").css("background","white");
+               });
+               $("div").bind("mouseenter",function() {
+                    $("div").css("background","green");
+                    $("div").css("color","black");
+               });
+					
+			});
+        </script>
+
+    </head>  
+
+    <body>
+
+    	<div style="width:70%; margin:10px auto;">
+
+	    	<p>Este div va a sufrir cambios</p>
+            <ol>
+            <li>Si hacemos click se volverá de color azul</li>
+            <li>Si hacemos doble click o salimos se volverá de color blanco</li>
+            <li>Al pasar el ratón por dentro será de color rojo</li>
+            </ol>
+	    </div>
+        <br><a id="volver" href="./ejemplo_puntos_4-5-6.html"> Volver</a>
+    </body>
+
+</html>
