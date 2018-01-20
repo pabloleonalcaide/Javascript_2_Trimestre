@@ -1,0 +1,21 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <title> Pablo Leon -función jquery</title>
+    <script src="jquery-3.2.1.js" type="text/javascript"></script>
+    <script>
+	    $(document).ready(function() {
+	        let elem1 = $("#elem1"); //identificado por id
+	        elem1.css("background-color", "#ff9999"); //modificando su css: css("atributo","valor")
+	        let divs = $("div"); // identificados por etiqueta
+	        divs.css("font-size", "32pt");
+	    });
+    </script>
+</head>
+<body>
+    <div id="elem1">Este elemento se llama elem1</div>
+    <div id="elem2">Este otro elemento se llama elem2</div>
+</body>
+
+</html>
