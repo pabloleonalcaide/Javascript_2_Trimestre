@@ -7,9 +7,7 @@ Ejercicios de jQuery del manual de desarrolloweb.com
 * 1.3 Manejando evento en una etiqueta <a>
 * 1.4 Añadir y Quitar clases CSS sobre elementos
 * 1.5 Mostrar y Ocultar elementos de la página
-	
 	* _En el manual se utilizaba .attr() que está deprecated por lo que opté por utilizar .prop()_ 
-	
 * 1.6 Efectos Rápidos
 * 1.7 Callbacks de funciones
 * 1.8 Uso sencillo de Ajax
@@ -42,6 +40,7 @@ Ejercicios de jQuery del manual de desarrolloweb.com
 * 5.1 Método css()
 * 5.2 Funciones CSS de jQuery para conocer el tamaño y posición de elementos
 
+---
 ### Eventos en jQuery
 
 * 6.1 Introducción a los eventos en jQuery
@@ -59,3 +58,11 @@ Ejercicios de jQuery del manual de desarrolloweb.com
 	* Indicar los eventos estándares en el DOM
 	* Los atributos pageX, pageY, currentTarget, timeStamp... ¿A qué objeto pertenecen? Demuestra su uso
 	* Diferencia entre .on(), .live(). bind() y .delegate()
+
+---
+### Plugins
+* 7.2 Reglas para el desarollo de pluglins en jQuery
+* 7.3 Plugin jQuery: textarea con cuenta de caracteres
+* 7.5 Plugin Tip con opciones en jQuery
+* 7.6 Esquema de programación de un plugin (sólo archivo .js)
+* 7.7 Plugin checkbox personalizado con jQuery

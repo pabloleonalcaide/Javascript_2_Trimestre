@@ -1,0 +1,90 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <title>Pablo Leon - Trabajando con plugins en jQuery - Tip simple</title>
+    <style type="text/css">
+    .tip {
+        background-color: #ffcc99;
+        padding: 10px;
+        display: none;
+        position: absolute;
+        width: 200px;
+    }
+    .otroestilotip {
+        background-color: #cccf49;
+        padding: 10px;
+        display: none;
+        position: absolute;
+        width: 240px;
+    }
+    </style>
+    <script src="../jquery-3.2.1.js"></script>
+    <script>
+    jQuery.fn.creaTip = function(textoTip, opciones) {
+		
+		//creamos nuestro objeto de configuración con valores por defecto
+        let configuracion = {
+            velocidad: 500,
+            animacionMuestra: { width: "show" },
+            animacionOculta: { opacity: "hide" },
+            claseTip: "tip"
+        }
+        //toma todos los valores del objeto opciones y los almacena en configuracion
+        jQuery.extend(configuracion, opciones);
+
+        this.each(function() {
+            elem = $(this);
+            let miTip = $('<div class="' + configuracion.claseTip + '">' + textoTip + '</div>');
+            $(document.body).append(miTip);
+            elem.data("capatip", miTip);
+
+            elem.mouseenter(function(e) {
+                let miTip = $(this).data("capatip");
+                miTip.css({
+                    left: e.pageX + 10,
+                    top: e.pageY + 5
+                });
+                miTip.animate(configuracion.animacionMuestra, configuracion.velocidad);
+            });
+            elem.mouseleave(function(e) {
+                let miTip = $(this).data("capatip");
+                miTip.animate(configuracion.animacionOculta, configuracion.velocidad);
+            });
+        });
+
+        return this;
+    };
+
+
+    $(document).ready(function() {
+    	//llamando a la función con los valores por defecto
+        $("#elemento1").creaTip("todo bien...");
+        //llamando a la función introduciendo nuestros valores
+        $("#elemento2").creaTip("Otra prueba...", {
+            velocidad: 1000,
+            claseTip: "otroestilotip",
+            animacionMuestra: {
+                opacity: "show",
+                padding: '25px',
+                'font-size': '2em'
+            },
+            animacionOculta: {
+                height: "hide",
+                padding: '5px',
+                'font-size': '1em'
+            }
+        });
+    })
+    </script>
+</head>
+
+<body>
+    <h1>Trabajando con plugins en jQuery - tip simple</h1>
+    <div id="elemento1" style="background-color: #ccccff; padding: 5px;">Pasa el ratón por encima de esta capa...</div>
+    <p>
+        Este texto es para poner <a id="elemento2" href="#">este enlace que también tiene tip</a>.
+    </p>
+</body>
+
+</html>

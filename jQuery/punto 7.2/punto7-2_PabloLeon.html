@@ -1,0 +1,60 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <title>Pablo Leon - Creando plugins en jQuery</title>
+    <script src="../jquery-3.2.1.js"></script>
+    <script>
+    jQuery.fn.parpadea = function() {
+        this.each(function() {
+            elem = $(this);
+            elem.fadeOut(250, function() {
+                $(this).fadeIn(250);		//encadena la función fadeIn(ms) al finalizar fadeOut(ms)
+            });
+        });
+        return this;
+    };
+    $(document).ready(function() {
+        //parpadean los elementos de class CSS "parpadear"
+        $(".parpadear").parpadea();
+        //añado un evento clic para un botón, para que al pulsarlo parpadeen los elementos de clase parpadear
+        $("#botonparpadear").click(function() {
+            $(".parpadear").parpadea();
+        })
+    })
+    </script>
+</head>
+
+<body>
+    <p class="parpadear">Hola que tal, esto parpadeó gracias a jQuery!</p>
+    <p>Parafo normal que no va a parpadear.</p>
+    <p class="parpadear">Sí parpadea</p>
+    <p>Parafo normal que no va a parpadear tampoco...</p>
+    <div class="parpadear" style="background-color: #ff9966; padding: 10px;">Esta capa también tiene la clase parpadear, con lo que ya se sabe...</div>
+    <p>
+        <input type="button" value="Parpadea de nuevo" id="botonparpadear">
+    </p>
+</body>
+
+</html>
+<!-- Reglas
+Tu plugin lo debes nombrar como jquery.[nombre de tu plugin].js. Por ejemplo jquery.desaparece.js. 
+•
+Añade las funciones como nuevos métodos por medio de la propiedad fn del objeto jQuery, para que se conviertan en métodos del propio objeto jQuery. 
+•
+Dentro de los métodos que añades como plugins, la palabra "this" será una referencia al objeto jQuery que recibe el método. 
+Por tanto, podemos utilizar "this" para acceder a cualquier propiedad del elemento de la página con el estamos trabajando. 
+•
+Colocar un punto y coma ";" al final de cada método que crees como plugin, para que el código fuente se pueda comprimir y siga 
+funcionando correctamente. Ese punto y coma debes colocarlo después de cerrar la llave del código de la función. 
+•
+El método debe retornar el propio objeto jQuery sobre el que se solicitó la ejecución del plugin. Esto lo podemos conseguir 
+con un return this; al final del código de la función. 
+•
+Se debe usar this.each para iterar sobre todo el conjunto de elementos que puede haber seleccionados. Con this.each podemos 
+iterar sobre cada uno de esos elementos seleccionados. Esto es interesante para producir código limpio, que además será 
+compatible con selectores que correspondan con varios elementos de la página. 
+•
+Asigna el plugin siempre al objeto jQuery, en vez de hacerlo sobre el símbolo $, así los usuarios podrán usar alias personalizados 
+para ese plugin a través del método noConfict(), descartando los problemas que puedan haber si dos plugin tienen el mismo nombre
+-->
