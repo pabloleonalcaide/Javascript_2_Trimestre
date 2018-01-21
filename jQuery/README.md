@@ -66,3 +66,7 @@ Ejercicios de jQuery del manual de desarrolloweb.com
 * 7.5 Plugin Tip con opciones en jQuery
 * 7.6 Esquema de programación de un plugin (sólo archivo .js)
 * 7.7 Plugin checkbox personalizado con jQuery
+
+---
+### Efectos en jQuery
+* 8.1 jQuery animate(): Animación de propiedades CSS
