@@ -69,7 +69,7 @@ Ejercicios de jQuery del manual de desarrolloweb.com
 
 ---
 ### Efectos en jQuery
-## Ejercicios recogidos en directorio Punto 8: Efectos en jQuery
+Ejercicios recogidos en directorio Punto 8: Efectos en jQuery
 * 8.1 jQuery animate(): Animación de propiedades CSS
 * 8.2 Animaciones de color en jQuery 
 * 8.3 Fading en jQuery
