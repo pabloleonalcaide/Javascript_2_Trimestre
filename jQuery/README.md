@@ -69,4 +69,13 @@ Ejercicios de jQuery del manual de desarrolloweb.com
 
 ---
 ### Efectos en jQuery
+## Ejercicios recogidos en directorio Punto 8: Efectos en jQuery
 * 8.1 jQuery animate(): Animación de propiedades CSS
+* 8.2 Animaciones de color en jQuery 
+* 8.3 Fading en jQuery
+* 8.4 Colas de efectos en jQuery
+* 8.5 Método queue() para acceder a una cola de efectos
+* 8.6 Meter cualquier tipo de función en una cola de efectos jQuery
+* 8.7 Parar la ejecución de una cola de efectos jQuery
+* 8.8 Método delay() para retrasar la ejecución efectos de la cola
+* 8.9 Cola de efectos personal (no predeterminada) en jQuery
