@@ -5,7 +5,7 @@
 {
     let colores;
     let circlesToFill;
-    let counter;
+    var counter;
     let linesCount;
     let checkButton;
     let circlesToCheck;
@@ -44,8 +44,9 @@
              circlesToFill[i].addEventListener("click", clean);
              break;
         }
-        counter++;
         }
+        if(counter<4)
+            counter++;
     }
     /**
      * Create a new row 
@@ -112,7 +113,7 @@
         }
 
         if (counter >= 4) {
-            rowChecked = mastermind.checkLine(arrayToCheck);
+            rowChecked = mastermind.comprobarCoincidencia(arrayToCheck);
             if (rowChecked.inSite > 0) {
                 while (counter2 < rowChecked.inSite) {
                     circlesToCheck[counter2].style = "background-color: black;";
@@ -138,8 +139,10 @@
     }
     /** clean a painted circle */
     let clean = function () {
+        counter--;
         this.style = "background-color: transparent;";
         this.removeEventListener("click", clean);
+
     }
     /** restart the game*/
     let reset = ()=> {
@@ -155,7 +158,7 @@
     /** start a new game */
     let init =  ()=> {
         mastermind.init();
-        mastermind.showTarget();
+        mastermind.mostrar();
         playPanel = document.getElementById("playPanel");
         popUpWinner = document.getElementById("winPanel");
         colores = document.getElementsByClassName("circle");

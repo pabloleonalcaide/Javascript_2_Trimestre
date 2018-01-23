@@ -18,7 +18,7 @@ mastermind = (function () {
 /**
  * check if user hits the play
  */
-    let checkLine = function (array) {
+    let comprobarCoincidencia = function (array) {
         let copyArray = target.slice();
         displaced = 0;
         inSite = 0;
@@ -34,6 +34,7 @@ mastermind = (function () {
         array.forEach(function (element, index) {
             if (copyArray.indexOf(array[index]) != -1) {
                 displaced++;
+
             }
         });
 
@@ -48,7 +49,7 @@ mastermind = (function () {
 /**
  * Shows the combination
  */
-    let showTarget = function () {
+    let mostrar = function () {
         console.log(target);
     }
 /**
@@ -57,14 +58,14 @@ mastermind = (function () {
     let generateTarget = function () {
         target = [];
         for (let i = 0; i < 4; i++) {
-            target.push(colours[Math.floor(Math.random() * (7 - 0)) + 0]);
+            target.push(colours[Math.floor(Math.random() * colours.length)]);
         }
     }
 
     /* Public*/
     return {
         init: init,
-        showTarget: showTarget,
-        checkLine: checkLine
+        mostrar: mostrar,
+        comprobarCoincidencia: comprobarCoincidencia
     };
 })();
