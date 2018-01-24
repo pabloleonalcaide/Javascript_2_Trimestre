@@ -125,7 +125,9 @@ main {
 }
 
 #winPanel {
-    top:0;
+    top:60px;
+    width:50%;
+    background-color: rgb(127,89,60);
     display: none;
     border-radius: 25px;
     position: absolute;

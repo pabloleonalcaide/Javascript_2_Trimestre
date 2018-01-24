@@ -32,9 +32,10 @@ mastermind = (function () {
         });
 
         array.forEach(function (element, index) {
+            let copyIndex = copyArray.indexOf(element);
             if (copyArray.indexOf(array[index]) != -1) {
                 displaced++;
-
+                copyArray[copyIndex] = 0;    
             }
         });
 
