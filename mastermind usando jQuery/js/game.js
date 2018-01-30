@@ -3,10 +3,9 @@
  * @verson 1.2
  */
 {
-    let circlesToFill;
     var counter;
+    let circlesToFill;
     let linesCount;
-    let checkButton;
     let circlesToCheck;
 
     /**
@@ -36,9 +35,9 @@
                 case "blackCircle":
                     circlesToFill[i].style = "background-color: black;"; break;
             }
-             circlesToFill[i].addEventListener("click", clean);
+             $(circlesToFill[i]).on("click", clean);
              break;
-        }
+            }
         }
         if(counter<4)
             counter++;
@@ -48,12 +47,12 @@
      */
     let generateNewLine = ()=> {
         removeCleanEvent();
-        let newRow = document.createElement("div");
-        newRow.id = "newRow";
-        let rowCirclesToFill = document.createElement("div");
-        rowCirclesToFill.id = "circlesToFill";
-        let rowCirclesToCheck = document.createElement("div");
-        rowCirclesToCheck.id = "circlesToCheck";
+        let newRow = $('<div id="newRow"></div>');
+        $('#playPanel').append(newRow);
+        let rowCirclesToFill = $('<div id="circlesToFill"></div>');
+        let rowCirclesToCheck = $('<div id="circlesToCheck"></div>');
+        newRow.append(rowCirclesToFill);
+        newRow.append(rowCirclesToCheck);
 
         let emptyCircle;
         let checkCircle;
@@ -63,19 +62,17 @@
             emptyCircle.classList.add("circleFill");
             emptyCircle.classList.add("circleFill" + linesCount);
 
-            rowCirclesToFill.appendChild(emptyCircle);
+            rowCirclesToFill.append(emptyCircle);
         }
         /* Insert the row of check circles */
         for (let i = 0; i < 4; i++) {
             checkCircle = document.createElement("div");
             checkCircle.classList.add("circleCheck");
             checkCircle.classList.add("circleCheck" + linesCount);
-            rowCirclesToCheck.appendChild(checkCircle);
+            rowCirclesToCheck.append(checkCircle);
         }
 
-        newRow.appendChild(rowCirclesToFill);
-        newRow.appendChild(rowCirclesToCheck);
-        $('#playPanel').append(newRow);
+        
 
         counter = 0;
         circlesToFill = document.getElementsByClassName("circleFill" + linesCount);
@@ -135,7 +132,7 @@
     /** clean a painted circle */
     let clean = function () {
         counter--;
-        this.style = "background-color: transparent;";
+        $(this).css("background-color", "transparent");
         this.removeEventListener("click", clean);
 
     }
@@ -145,18 +142,18 @@
         $('#winPanel').css("display","none");
     }
     /** remove the Clean event in the previous row */
-     let removeCleanEvent = function () {
-        for (let i = 0; i < circlesToFill.length; i++) {
-            circlesToFill[i].removeEventListener("click", clean);
+    let removeCleanEvent = function () {
+        for (let i = 0; i < $('.circleFill').length; i++) {
+            $('.circleFill').off("click");
         }
 
-}
+    }
     /** start a new game */
     let init =  ()=> {
         mastermind.init();
         mastermind.mostrar();
-        circlesToFill = document.getElementsByClassName("circleToFill");
-        circlesToCheck = document.getElementsByClassName("circleToCheck");
+        circlesToFill = $(".circlesToFill");
+        circlesToCheck = $(".circlesToCheck");
         linesCount = 0;
         counter = 0;
 
