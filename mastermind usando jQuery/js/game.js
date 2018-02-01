@@ -11,41 +11,40 @@
     /**
      * Insert a color into the row if there is space
      */
-    let insertCircle = function () {
-        for (let i = 0; i < circlesToFill.length; i++) { 
+    let insertCircle = function() {
+        for (let i = 0; i < circlesToFill.length; i++) {
             //check where is the first empty space
-
-            if (circlesToFill[i].style.backgroundColor == "transparent" || circlesToFill[i].style.backgroundColor == "" || 
-                circlesToFill[i].style.backgroundColor == "none" ) {
-            switch (this.id) {
-                case "redCircle":
-                    circlesToFill[i].style = "background-color: red;"; break;
-                case "greenCircle":
-                    circlesToFill[i].style = "background-color: green;"; break;
-                case "blueCircle":
-                    circlesToFill[i].style = "background-color: blue;"; break;
-                case "yellowCircle":
-                    circlesToFill[i].style = "background-color: yellow;"; break;
-                case "brownCircle":
-                    circlesToFill[i].style = "background-color: brown;"; break;
-                case "orangeCircle":
-                    circlesToFill[i].style = "background-color: orange;"; break;
-                case "whiteCircle":
-                    circlesToFill[i].style = "background-color: white;"; break;
-                case "blackCircle":
-                    circlesToFill[i].style = "background-color: black;"; break;
-            }
-             $(circlesToFill[i]).on("click", clean);
-             break;
+            if (circlesToFill[i].style.backgroundColor == "transparent" || circlesToFill[i].style.backgroundColor == "" ||
+                circlesToFill[i].style.backgroundColor == "none") {
+                switch (this.id) {
+                    case "redCircle":
+                        circlesToFill[i].style = "background-color: red;"; break;
+                    case "greenCircle":
+                        circlesToFill[i].style = "background-color: green;"; break;
+                    case "blueCircle":
+                        circlesToFill[i].style = "background-color: blue;"; break;
+                    case "yellowCircle":
+                        circlesToFill[i].style = "background-color: yellow;"; break;
+                    case "brownCircle":
+                        circlesToFill[i].style = "background-color: brown;"; break;
+                    case "orangeCircle":
+                        circlesToFill[i].style = "background-color: orange;"; break;
+                    case "whiteCircle":
+                        circlesToFill[i].style = "background-color: white;"; break;
+                    case "blackCircle":
+                        circlesToFill[i].style = "background-color: black;"; break;
+                }
+                $(circlesToFill[i]).on("click", clean);
+                break;
             }
         }
-        if(counter<4)
+        if (counter < 4)
             counter++;
     }
     /**
      * Create a new row 
      */
-    let generateNewLine = ()=> {
+    let generateNewLine = () => {
         removeCleanEvent();
         let newRow = $('<div id="newRow"></div>');
         $('#playPanel').append(newRow);
@@ -72,36 +71,34 @@
             rowCirclesToCheck.append(checkCircle);
         }
 
-        
-
         counter = 0;
         circlesToFill = document.getElementsByClassName("circleFill" + linesCount);
         circlesToCheck = document.getElementsByClassName("circleCheck" + linesCount);
         linesCount++;
     }
 
-    let check =  ()=> {
+    let check = () => {
         let arrayToCheck = [];
         let counter2 = 0;
         for (let i = 0; i < circlesToFill.length; i++) {
-            if (circlesToFill[i].style.backgroundColor == "red") {
-                arrayToCheck.push("rojo");
-            } else if (circlesToFill[i].style.backgroundColor == "white") {
-                arrayToCheck.push("blanco");
-            } else if (circlesToFill[i].style.backgroundColor == "black") {
-                arrayToCheck.push("negro");
-            } else if (circlesToFill[i].style.backgroundColor == "green") {
-                arrayToCheck.push("verde");
-            } else if (circlesToFill[i].style.backgroundColor == "blue") {
-                arrayToCheck.push("azul");
-            } else if (circlesToFill[i].style.backgroundColor == "yellow") {
-                arrayToCheck.push("amarillo");
-            } else if (circlesToFill[i].style.backgroundColor == "brown") {
-                arrayToCheck.push("marron");
-            } else if (circlesToFill[i].style.backgroundColor == "orange") {
-                arrayToCheck.push("naranja");
+            switch (circlesToFill[i].style.backgroundColor) {
+                case "red":
+                    arrayToCheck.push("rojo"); break;
+                case "white":
+                    arrayToCheck.push("blanco"); break;
+                case "black":
+                    arrayToCheck.push("negro"); break;
+                case "green":
+                    arrayToCheck.push("verde"); break;
+                case "blue":
+                    arrayToCheck.push("azul"); break;
+                case "yellow":
+                    arrayToCheck.push("amarillo"); break;
+                case "brown":
+                    arrayToCheck.push("marron"); break;
+                case "orange":
+                    arrayToCheck.push("naranja"); break;
             }
-
         }
 
         if (counter >= 4) {
@@ -114,12 +111,12 @@
             }
 
             if (counter2 == 4) {
-        		$('#winPanel').css("display","block");           
-        		}
+                $('#winPanel').css("display", "block");
+            }
 
             if (rowChecked.displaced > 0) {
                 for (let i = 0; i < rowChecked.displaced; i++) {
-                    circlesToCheck[counter2].style = "background-color: white;";
+                    $circlesToCheck[counter2].style = "background-color: white;";
                     counter2++;
                 }
                 counter2 = 0;
@@ -130,26 +127,24 @@
         }
     }
     /** clean a painted circle */
-    let clean = function () {
+    let clean = function() {
         counter--;
         $(this).css("background-color", "transparent");
         this.removeEventListener("click", clean);
 
     }
     /** restart the game*/
-    let reset = ()=> {
+    let reset = () => {
         init();
-        $('#winPanel').css("display","none");
+        $('#winPanel').css("display", "none");
     }
     /** remove the Clean event in the previous row */
-    let removeCleanEvent = function () {
-        for (let i = 0; i < $('.circleFill').length; i++) {
-            $('.circleFill').off("click");
-        }
+    let removeCleanEvent = function() {
+        $('.circleFill').off("click");
 
     }
     /** start a new game */
-    let init =  ()=> {
+    let init = function() {
         mastermind.init();
         mastermind.mostrar();
         circlesToFill = $(".circlesToFill");
@@ -159,11 +154,9 @@
 
         $('#check').click(check);
         $('#reset').click(reset);
-    
-         $('.circle').on("click",insertCircle);        //insert a color event
-        
+        $('.circle').on("click", insertCircle); //insert a color event
+
         generateNewLine();
     }
-
     $(document).ready(init);
 }
