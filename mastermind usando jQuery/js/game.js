@@ -3,9 +3,10 @@
  * @verson 1.2
  */
 {
+    // counter defined as global to use it in different functions
     var counter;
-    let circlesToFill;
     let linesCount;
+    let circlesToFill;
     let circlesToCheck;
 
     /**
@@ -18,7 +19,7 @@
                 circlesToFill[i].style.backgroundColor == "none") {
                 switch (this.id) {
                     case "redCircle":
-                        circlesToFill[i].style = "background-color: red;"; break;
+                        circlesToFill[i].style="background-color: red"; break;
                     case "greenCircle":
                         circlesToFill[i].style = "background-color: green;"; break;
                     case "blueCircle":
@@ -58,16 +59,15 @@
         /* Insert the row of circles to paint */
         for (let i = 0; i < 4; i++) {
             emptyCircle = document.createElement("div");
-            emptyCircle.classList.add("circleFill");
-            emptyCircle.classList.add("circleFill" + linesCount);
+            emptyCircle.classList.add("circleFill", "circleFill" + linesCount);
 
             rowCirclesToFill.append(emptyCircle);
         }
         /* Insert the row of check circles */
         for (let i = 0; i < 4; i++) {
             checkCircle = document.createElement("div");
-            checkCircle.classList.add("circleCheck");
-            checkCircle.classList.add("circleCheck" + linesCount);
+            
+            checkCircle.classList.add("circleCheck", "circleCheck" + linesCount);
             rowCirclesToCheck.append(checkCircle);
         }
 
@@ -116,7 +116,7 @@
 
             if (rowChecked.displaced > 0) {
                 for (let i = 0; i < rowChecked.displaced; i++) {
-                    $circlesToCheck[counter2].style = "background-color: white;";
+                    circlesToCheck[counter2].style = "background-color: white;";
                     counter2++;
                 }
                 counter2 = 0;
@@ -136,7 +136,7 @@
     /** restart the game*/
     let reset = () => {
         init();
-        $('#winPanel').css("display", "none");
+        $('#winPanel').hide("drop", {direction: "down" }, "slow");
     }
     /** remove the Clean event in the previous row */
     let removeCleanEvent = function() {
