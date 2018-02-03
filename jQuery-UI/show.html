@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery-ui - Pablo Leon</title>
+    <meta name="author" content="pablo leon alcaide">
+    <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/show.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/jquery-ui.css">
+    <style>
+    #botoncito {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+
+    #effect {
+        width: 240px;
+        height: 170px;
+        padding: 0.4em;
+        position: relative;
+    }
+
+    #effect h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Probando jQuery-ui - Selectable</h1>
+        <button id="botoncito" class="ui-state-default ui-corner-all">Probar</button>
+        <div id="effect" class="ui-widget-content ui-corner-all">
+            <h3 class="ui-widget-header ui-corner-all">Show</h3>
+            <p>
+                El contenido de esta caja es irrelevante, sin embargo es necesario que ocupe cierto espacio, y para no volver a tener una caja vacía, la llenamos de palabras.
+            </p>
+        </div>
+        <ul>
+            <li>Tipo de Efecto: Show (Explode)</li>
+            <li><a href="http://jqueryui.com/show/" title="">demo</a> del sitio oficial</li>
+            <li>Descripción: Hace aparecer un elemento del DOM, existen distintos efectos como explode, scale, size, bounze que modificarán el modo en que aparezca el elmento</li>
+            <li>Localización: se ha utilizado en el div con texto, disparándose una vez hacemos click en el botón</li>
+        </ul>
+        <a href="./index.html">Volver</a>
+    </main>
+</body>
+
+</html>

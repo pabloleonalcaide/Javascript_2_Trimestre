@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery-ui - Pablo Leon</title>
+    <meta name="author" content="pablo leon alcaide">
+    <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/selectable.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/jquery-ui.css">
+    <style>
+    .framework {
+        width: 200px;
+        background-color: #f4f4f4;
+        margin: 4px;
+        text-align: center;
+        border: 3px solid #d8d8d8;
+        padding: 4px;
+    }
+
+    div.ui-selected {
+        border: 2px solid #aaa;
+        background-color: green
+    }
+
+    div.ui-selecting {
+        border: 2px solid #000;
+        background-color: lightgreen;
+    }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Probando jQuery-ui - Selectable</h1>
+        <ul>
+            <li>Tipo de interacción: Selectable</li>
+            <li><a href="http://jqueryui.com/selectable/" title="">demo</a> del sitio oficial</li>
+            <li>Descripción: Nos permite seleccionar un elemento o grupo de elementos con el ratón, modificando su aspecto al interactuar</li>
+            <li>Localización: se ha utilizado en los divs que contienen el nombre de distintos frameworks</li>
+        </ul>
+        <div id="container">
+            <h4>Elige uno o varios Frameworks</h4>
+            <div class="framework">Vanilla</div>
+            <div class="framework">jQuery</div>
+            <div class="framework">React</div>
+            <div class="framework">Vue</div>
+            <div class="framework">Angular</div>
+        </div>
+        <a href="./index.html">Volver</a>
+    </main>
+</body>
+
+</html>
