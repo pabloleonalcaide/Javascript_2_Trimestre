@@ -19,21 +19,21 @@
                 circlesToFill[i].style.backgroundColor == "none") {
                 switch (this.id) {
                     case "redCircle":
-                        circlesToFill[i].style="background-color: red"; break;
+                        circlesToFill[i].style.backgroundColor = 'red'; break;
                     case "greenCircle":
-                        circlesToFill[i].style = "background-color: green;"; break;
+                        circlesToFill[i].style.backgroundColor = 'green'; break;
                     case "blueCircle":
-                        circlesToFill[i].style = "background-color: blue;"; break;
+                        circlesToFill[i].style.backgroundColor = 'blue'; break;
                     case "yellowCircle":
-                        circlesToFill[i].style = "background-color: yellow;"; break;
+                        circlesToFill[i].style.backgroundColor = 'yellow'; break;
                     case "brownCircle":
-                        circlesToFill[i].style = "background-color: brown;"; break;
+                        circlesToFill[i].style.backgroundColor = 'brown'; break;
                     case "orangeCircle":
-                        circlesToFill[i].style = "background-color: orange;"; break;
+                        circlesToFill[i].style.backgroundColor = 'orange'; break;
                     case "whiteCircle":
-                        circlesToFill[i].style = "background-color: white;"; break;
+                        circlesToFill[i].style.backgroundColor = 'white'; break;
                     case "blackCircle":
-                        circlesToFill[i].style = "background-color: black;"; break;
+                        circlesToFill[i].style.backgroundColor = 'black'; break;
                 }
                 $(circlesToFill[i]).on("click", clean);
                 break;
@@ -66,7 +66,6 @@
         /* Insert the row of check circles */
         for (let i = 0; i < 4; i++) {
             checkCircle = document.createElement("div");
-            
             checkCircle.classList.add("circleCheck", "circleCheck" + linesCount);
             rowCirclesToCheck.append(checkCircle);
         }
@@ -151,8 +150,8 @@
         circlesToCheck = $(".circlesToCheck");
         linesCount = 0;
         counter = 0;
-
-        $('#check').click(check);
+        $('h1').hide().show( "fold", 2000);
+        $('#check').click(check).hide().show("fade", {},  {duration:1200}).effect("bounce", { times:3 },  { duration:400}).dequeue();
         $('#reset').click(reset);
         $('.circle').on("click", insertCircle); //insert a color event
 

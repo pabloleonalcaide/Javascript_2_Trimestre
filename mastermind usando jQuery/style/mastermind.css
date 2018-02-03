@@ -44,49 +44,49 @@ main {
 }
 
 #redCircle {
-    background-color: #ff0000;
+    background-color: red;
     margin-top: 20px;
     cursor: pointer;
 }
 
 #whiteCircle {
-    background-color: #fff;
+    background-color: white;
     margin-top: 20px;
     cursor: pointer;
 }
 
 #blackCircle {
-    background-color: #000;
+    background-color: black;
     margin-top: 20px;
     cursor: pointer;
 }
 
 #yellowCircle {
-    background-color: #ffff00;
+    background-color: yellow;
     margin-top: 20px;
     cursor: pointer;
 }
 
 #orangeCircle {
-    background-color: #ffa500;
+    background-color: orange;
     margin-top: 20px;
     cursor: pointer;
 }
 
 #brownCircle {
-    background-color: #a52a2d;
+    background-color: brown;
     margin-top: 20px;
     cursor: pointer;
 }
 
 #blueCircle {
-    background-color: #0000ff;
+    background-color: blue;
     cursor: pointer;
     margin-top: 20px;
 }
 
 #greenCircle {
-    background-color: #00ff00;
+    background-color: green;
     cursor: pointer;
     margin-top: 20px;
 }
