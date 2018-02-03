@@ -125,13 +125,14 @@ main {
 }
 
 #winPanel {
-    top:60px;
+    top:0px;
     width:50%;
     background-color: rgb(127,89,60);
     display: none;
     border-radius: 25px;
     position: absolute;
     text-align: center;
+    padding-bottom: 5px;
 }
 
 #winPanel a {
