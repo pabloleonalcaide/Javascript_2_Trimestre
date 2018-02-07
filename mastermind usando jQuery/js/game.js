@@ -110,7 +110,24 @@
             }
 
             if (counter2 == 4) {
-                $('#winPanel').css("display", "block");
+ 				$( "#dialog" ).dialog("open");
+                    $( "#dialog" ).dialog({
+					      resizable: false,
+					      height: "auto",
+					      width: 400,
+					      modal: true,
+					      buttons: {
+					        "Partida Nueva": function() {
+					          $( this ).dialog( "close" );
+					          location.reload();
+					        },
+					        "Salir": function() {
+					          $( this ).dialog( "close" );
+
+					        }
+					      }
+				   });
+
             }
 
             if (rowChecked.displaced > 0) {
@@ -135,7 +152,6 @@
     /** restart the game*/
     let reset = () => {
         init();
-        $('#winPanel').hide("drop", {direction: "down" }, "slow");
     }
     /** remove the Clean event in the previous row */
     let removeCleanEvent = function() {
@@ -150,11 +166,17 @@
         circlesToCheck = $(".circlesToCheck");
         linesCount = 0;
         counter = 0;
+ 		$( "#dialog" ).dialog({ autoOpen: false });
         $('h1').hide().show( "fold", 2000);
-        $('#check').click(check).hide().show("fade", {},  {duration:1200}).effect("bounce", { times:3 },  { duration:400}).dequeue();
+        $('#check').click(check)
+        $('#check').click(function(){
+        	$(this).effect("shake");
+        })
         $('#reset').click(reset);
         $('.circle').on("click", insertCircle); //insert a color event
-
+        $('.circle').click(function(){
+        	$(this).effect("bounce");
+        })
         generateNewLine();
     }
     $(document).ready(init);

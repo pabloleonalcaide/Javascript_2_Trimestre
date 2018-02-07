@@ -5,6 +5,7 @@
 	<title>Mastermind - Pablo Leon</title>
 	<link rel="stylesheet" href="./style/normalize.css">
 	<link rel="stylesheet" href="./style/mastermind.css">
+	<link rel="stylesheet" href="./style/jquery-ui.css">
 	<meta name="author" content="pablo leon alcaide">
 	<script src="./js/mastermind.js" type="text/javascript" charset="utf-8"  ></script>
     <script src="./js/jquery.js" type="text/javascript" charset="utf-8"  ></script>
@@ -17,11 +18,7 @@
 	<main>
         <div id="playPanel"> 
         </div>
-        <div id="winPanel">
-            <h3>¡Ganaste! &#9786;</h3>
-            <a href="" id="reset">Reiniciar</a>
-            <a href="http://www.google.es" id="exit">Salir</a> <!-- preguntar qué debe hacer salir exactamente -->
-        </div>
+        <div id="dialog" title="¡¡¡Ganaste!!!">¿Deseas Volver a Jugar?</div>
         <div id="colourPanel"> <!-- volver a comprobarlo con button -->
             <div class="circle" id="whiteCircle"></div>
             <div class="circle" id="blackCircle"></div>
