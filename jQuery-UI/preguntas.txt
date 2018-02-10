@@ -1,0 +1,5 @@
+Basándote en un tema de la galería, modifícalo. Indica los elementos modificados
+	Se ha modificado el background y estilo de letra en la ventana modal de 'Victoria' (elemento dialog)
+
+Explica cómo has aligerado la descarga (Componentes seleccionados/no seleccionados)
+	En mi caso he seleccionado todos los elementos disponibles porque quería probar con varios elementos diferentes, sin embargo, puede aligerarse la carga al descargar el tema desde la página oficial de jqueryui.com seleccionando los elementos que te interesa utilizar (widgets, effects, etc).
