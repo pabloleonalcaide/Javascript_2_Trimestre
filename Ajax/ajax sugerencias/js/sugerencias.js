@@ -1,35 +1,21 @@
-{
-	/**
-	*  When document is ready
-	*/
+	$listSuggest;
 	let init = ()=>{
+		$listSuggest = $("#suggest");
 		$('#recurso').keyup(function(){
-			showSuggest($(this).val());
+			muestraSugerencias($(this).val());
 		})
 	}
 
 	/**
 	* Show the suggest for the text in the input
 	*/
-	function showSuggest(text){
-     $.ajax({
-                    type: "POST",
-                    url: "search.php",
-                    data: "query="+text,
-                    dataType: "html",
-                    beforeSend: function(){
-                    },
-                    error: function(){
-                          alert("error petición ajax");
-                    },
-                    success: function(data){                                                    
-                          $("#resultado").empty();
-                          $("#resultado").append(data);
-                                                             
-                    }
-              });
-
+	function muestraSugerencias(consulta){
+		if(consulta!= ""){
+			$.post("./php/search.php", {query: consulta}, function (mensaje){
+				$listSuggest.html(mensaje);
+			});
+		}else{
+			$listSuggest.html("");
+		}
 	}
-	$(document).ready(init)
-
-}
+	$().ready(init)
