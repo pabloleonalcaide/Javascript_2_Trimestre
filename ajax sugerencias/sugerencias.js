@@ -17,6 +17,7 @@
 			$.post("./php/search.php", {query: consulta}, function (mensaje){
 				$("#suggest").html(mensaje);
 			});
+			
 		}else{
 			$("#suggest").html("");
 		}

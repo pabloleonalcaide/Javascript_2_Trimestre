@@ -14,5 +14,9 @@ foreach($alumnos as $alumno){
     $resultado = $resultado."<br>".$alumno;
   }
 }
-echo $resultado;
+if($resultado==""){
+  echo "Sin coincidencias";
+}else{
+  echo $resultado;  
+}
 ?>
