@@ -1,6 +1,8 @@
-	$listSuggest;
+	/**
+	* @author Pablo Leon Alcaide
+	*/
+	$suggestList = $('#suggest');
 	let init = ()=>{
-		$listSuggest = $("#suggest");
 		$('#recurso').keyup(function(){
 			muestraSugerencias($(this).val());
 		})
@@ -11,11 +13,14 @@
 	*/
 	function muestraSugerencias(consulta){
 		if(consulta!= ""){
+			//url to request, query, doSomething
 			$.post("./php/search.php", {query: consulta}, function (mensaje){
-				$listSuggest.html(mensaje);
+				$suggestList.html(mensaje);
+
 			});
+
 		}else{
-			$listSuggest.html("");
+			$suggestList.html("");
 		}
 	}
-	$().ready(init)
+	$(document).ready(init)
