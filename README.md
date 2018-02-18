@@ -7,6 +7,8 @@
 * jQuery
 * jQuery UI
 * Ajax
+	* Ejercicios básicos (javascript y jquery)
+	* peticion de fichero json (javascript y jquery)
 
 Visitar Github Page [Aquí](https://pabloleonalcaide.github.io/Javascript_2_Trimestre/)
 
