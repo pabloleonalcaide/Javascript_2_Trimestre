@@ -140,16 +140,17 @@
 
             if ($hits == 4)
                 openWinnerDialog();
-            else
+            else{
+	            if ($rowChecked.displaced > 0) {
+	                for (let i = 0; i < $rowChecked.displaced; i++) {
+	                    $circlesToCheck[$hits].style = "background-color: white;";
+	                    $hits++;
+	                }
+	                $hits = 0;
+	            }
                 generateNewLine();
-
-            if ($rowChecked.displaced > 0) {
-                for (let i = 0; i < $rowChecked.displaced; i++) {
-                    $circlesToCheck[$hits].style = "background-color: white;";
-                    $hits++;
-                }
-                $hits = 0;
             }
+
         }
     }
     /** clean a painted circle */
