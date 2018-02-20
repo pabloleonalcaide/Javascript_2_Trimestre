@@ -88,30 +88,33 @@
     */
     let checkRow = () => {
         if (counter >= 4) {
-            let hits = 0;       
             $rowChecked = mastermind.comprobarCoincidencia(generateArray());
-            if ($rowChecked.inSite > 0) {
-                while (hits < $rowChecked.inSite) {
-                    $circlesToCheck[hits].style = "background-color: black;";
-                    hits++;
-                }
-            }
+            let hits = paintBlack($rowChecked);
 
             if (hits == 4)
                 openWinnerDialog();
             else{
-	            if ($rowChecked.displaced > 0) {
-	                for (let i = 0; i < $rowChecked.displaced; i++) {
-	                    $circlesToCheck[hits].style = "background-color: white;";
-	                    hits++;
-	                }
-	                hits = 0;
-	            }
+                paintWhite($rowChecked,hits);
                 generateNewLine();
             }
         }
     }
-
+    let paintBlack=($rowChecked)=>{
+        let hits = 0;       
+            while (hits < $rowChecked.inSite) {
+                    $circlesToCheck[hits].style = "background-color: black;";
+                    hits++;
+            }
+        return hits;
+    }
+    let paintWhite=($rowChecked,hits)=>{
+        if ($rowChecked.displaced > 0) {
+            for (let i = 0; i < $rowChecked.displaced; i++) {
+                $circlesToCheck[hits].style = "background-color: white;";
+                    hits++;
+            }
+        }
+    }
     let generateArray =()=>{
         let arrayToCheck = [];     
         $circlesToFill.each(function(index,element){
