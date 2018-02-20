@@ -1,146 +1,130 @@
 body {
-    background-color: rgb(127,89,60);
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    align-content: center;
+  background-color: #7f593c;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
 }
-h1{
-    color: #f4f4f4;
-    text-shadow: 2px 3px rgba(0,0,0,0.6);
+h1 {
+  color: #f4f4f4;
+  text-shadow: 2px 3px rgba(0,0,0,0.6);
 }
 main {
-    background: 
-    linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2)), url("../images/bg.jpg");
-    width: 50%;
-    height: auto;
-    border-radius: 25px 25px 0 0;
-    box-shadow: 0 2px 18px rgb(52,52,52);
-    display: grid;
-    /*grid-template-columns: 80% 20%;
-    */margin-bottom: 10px;
+  background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url("../images/bg.jpg");
+  width: 50%;
+  height: auto;
+  border-radius: 25px 25px 0 0;
+  box-shadow: 0 2px 18px #343434;
+  display: grid;
+/*grid-template-columns: 80% 20%;
+    */
+  margin-bottom: 10px;
 }
-
 #playPanel {
-    display: flex;
-    flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
 }
-
 #colourPanel {
-    position:absolute;
-    right:20px;
-    top:20px;
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-    justify-content: center;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
 }
-
 .circle {
-    height: 45px;
-    width: 45px;
-    border-radius: 50px;
-    box-shadow: 0 0 12px rgb(0,0,0);
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  box-shadow: 0 0 12px #000;
 }
-
-#redCircle {
-    background-color: red;
-    margin-top: 20px;
-    cursor: pointer;
+#red {
+  background-color: #f00;
+  margin-top: 20px;
+  cursor: pointer;
 }
-
-#whiteCircle {
-    background-color: white;
-    margin-top: 20px;
-    cursor: pointer;
+#white {
+  background-color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
 }
-
-#blackCircle {
-    background-color: black;
-    margin-top: 20px;
-    cursor: pointer;
+#black {
+  background-color: #000;
+  margin-top: 20px;
+  cursor: pointer;
 }
-
-#yellowCircle {
-    background-color: yellow;
-    margin-top: 20px;
-    cursor: pointer;
+#yellow {
+  background-color: #ff0;
+  margin-top: 20px;
+  cursor: pointer;
 }
-
-#orangeCircle {
-    background-color: orange;
-    margin-top: 20px;
-    cursor: pointer;
+#orange {
+  background-color: #ffa500;
+  margin-top: 20px;
+  cursor: pointer;
 }
-
-#brownCircle {
-    background-color: brown;
-    margin-top: 20px;
-    cursor: pointer;
+#brown {
+  background-color: #a52a2a;
+  margin-top: 20px;
+  cursor: pointer;
 }
-
-#blueCircle {
-    background-color: blue;
-    cursor: pointer;
-    margin-top: 20px;
+#blue {
+  background-color: #00f;
+  cursor: pointer;
+  margin-top: 20px;
 }
-
-#greenCircle {
-    background-color: green;
-    cursor: pointer;
-    margin-top: 20px;
+#green {
+  background-color: #008000;
+  cursor: pointer;
+  margin-top: 20px;
 }
-
 #check {
-    height: 50px;
-    width: 70px;
-    margin: 10px 0 10px 0;
+  height: 50px;
+  width: 70px;
+  margin: 10px 0 10px 0;
 }
-
 #check:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-
-#circlesToFill, #circlesToCheck {
-    display: inline-block;
+#circlesToFill,
+#circlesToCheck {
+  display: inline-block;
 }
 .circleFill {
-    border-radius: 50px;
-    height: 50px;
-    width: 50px;
-    border: 1px solid rgba(0,0,0,0.7);
-    box-shadow: 0 0 12px #000;
-    display: inline-block;
-    margin: 20px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  border: 1px solid rgba(0,0,0,0.7);
+  box-shadow: 0 0 12px #000;
+  display: inline-block;
+  margin: 20px;
 }
-
 .circleCheck {
-    border-radius: 50px;
-    border: 1px solid rgba(0,0,0,0.7);
-    height: 20px;
-    width: 20px;
-    box-shadow: 0 0 12px #000;
-    display: inline-block;
-    margin: 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(0,0,0,0.7);
+  height: 20px;
+  width: 20px;
+  box-shadow: 0 0 12px #000;
+  display: inline-block;
+  margin: 20px;
 }
-
 #winPanel {
-    top:0px;
-    width:50%;
-    background-color: rgb(127,89,60);
-    display: none;
-    border-radius: 25px;
-    position: absolute;
-    text-align: center;
-    padding-bottom: 5px;
+  top: 0px;
+  width: 50%;
+  background-color: #7f593c;
+  display: none;
+  border-radius: 25px;
+  position: absolute;
+  text-align: center;
+  padding-bottom: 5px;
 }
-
 #winPanel a {
-	display:block;
-    text-decoration: none;
-    color: black;
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px 18px 15px 18px;
-    margin: 15px;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 18px 15px 18px;
+  margin: 15px;
 }

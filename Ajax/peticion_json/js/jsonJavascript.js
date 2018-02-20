@@ -1,8 +1,9 @@
 {
-let angular;
 let peticion;
 let descripcion;
 let titulo;
+let imagen;
+let enlace;
 
 let init = ()=>{
 	titulo = document.getElementById("title");
@@ -10,20 +11,23 @@ let init = ()=>{
 	enlace = document.getElementById("enlace");
 	imagen = document.getElementById("image");
 	angular = document.getElementById("angular");
-	angular.addEventListener("click", enviarPeticion.bind(null,"angular"));
 	vue = document.getElementById("vue");
-	vue.addEventListener("click", enviarPeticion.bind(null,"vue"));
 	react = document.getElementById("react");
-	react.addEventListener("click", enviarPeticion.bind(null,"react"));
 	backbone = document.getElementById("backbone");
-	backbone.addEventListener("click", enviarPeticion.bind(null,"backbone"));
 	ember = document.getElementById("ember");
-	ember.addEventListener("click", enviarPeticion.bind(null,"ember"));
 	mercury = document.getElementById("mercury");
-	mercury.addEventListener("click", enviarPeticion.bind(null,"mercury"));
 	aurelia = document.getElementById("aurelia");
+	angular.addEventListener("click", enviarPeticion.bind(null,"angular"));
+	vue.addEventListener("click", enviarPeticion.bind(null,"vue"));
+	react.addEventListener("click", enviarPeticion.bind(null,"react"));
+	backbone.addEventListener("click", enviarPeticion.bind(null,"backbone"));
+	ember.addEventListener("click", enviarPeticion.bind(null,"ember"));
+	mercury.addEventListener("click", enviarPeticion.bind(null,"mercury"));
 	aurelia.addEventListener("click", enviarPeticion.bind(null,"aurelia"));
 }
+/**
+* Realiza la petición según el botón seleccionado.
+*/
 let enviarPeticion = function(framework){
 	peticion = new XMLHttpRequest();
 	peticion.onreadystatechange = muestraContenido;
@@ -31,6 +35,9 @@ let enviarPeticion = function(framework){
 	peticion.send(null);
 }
 
+/**
+* Muestra el contenido devuelto por la petición ajax
+*/
 let muestraContenido = ()=>{
 	 if(peticion.readyState == 4 && peticion.status == 200){
 	 	let miFramework = JSON.parse(peticion.responseText);
