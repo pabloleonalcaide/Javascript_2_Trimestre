@@ -3,7 +3,7 @@
  * @author Pablo Leon Alcaide
  */
 mastermind = (function () {
-    let colours = ["azul","verde","naranja","amarillo","blanco","negro","rojo","marron"];
+    let colours = ["blue","green","orange","yellow","white","black","red","brown"];
     let displaced;
     let inSite;
     let target = [];
