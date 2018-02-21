@@ -7,7 +7,8 @@
     let linesCount;
     let $circlesToFill;
     let $circlesToCheck;
-
+    let hits;
+    let $rowChecked;
     /** 
     * start a new game
     * @see mastermind.js
@@ -60,8 +61,7 @@
         $('#playPanel').append($newRow);
         let $rowCirclesToFill = $('<div id="circlesToFill"></div>');
         let $rowCirclesToCheck = $('<div id="circlesToCheck"></div>');
-        $newRow.append($rowCirclesToFill);
-        $newRow.append($rowCirclesToCheck);
+        $newRow.append($rowCirclesToFill).append($rowCirclesToCheck);
 
         let $emptyCircle;
         let $checkCircle;
@@ -86,18 +86,18 @@
     let checkRow = () => {
         if (counter >= 4) {
             $rowChecked = mastermind.comprobarCoincidencia(generateArray());
-            let hits = paintBlack($rowChecked);
+            hits = paintBlack();
 
             if (hits == 4)
                 openWinnerDialog();
             else{
-                paintWhite($rowChecked,hits);
+                paintWhite();
                 generateNewLine();
             }
         }
     }
-    let paintBlack=($rowChecked)=>{
-        let hits = 0;       
+    let paintBlack=()=>{
+        hits = 0;       
             while (hits < $rowChecked.inSite) {
                     $circlesToCheck[hits].style = "background-color: black;";
                     hits++;
@@ -105,7 +105,7 @@
         return hits;
     }
 
-    let paintWhite=($rowChecked,hits)=>{
+    let paintWhite=()=>{
         if ($rowChecked.displaced > 0) {
             for (let i = 0; i < $rowChecked.displaced; i++) {
                 $circlesToCheck[hits].style = "background-color: white;";
@@ -117,24 +117,7 @@
     let generateArray =()=>{
         let arrayToCheck = [];     
         $circlesToFill.each(function(index,element){
-            switch (element.style.backgroundColor) {
-                case "red":
-                    arrayToCheck.push("rojo"); break;
-                case "white":
-                    arrayToCheck.push("blanco"); break;
-                case "black":
-                    arrayToCheck.push("negro"); break;
-                case "green":
-                    arrayToCheck.push("verde"); break;
-                case "blue":
-                    arrayToCheck.push("azul"); break;
-                case "yellow":
-                    arrayToCheck.push("amarillo"); break;
-                case "brown":
-                    arrayToCheck.push("marron"); break;
-                case "orange":
-                    arrayToCheck.push("naranja"); break;
-            }  
+            arrayToCheck.push(element.style.backgroundColor);
         })
         return arrayToCheck;
     }
@@ -157,5 +140,5 @@
                           }
                    });
     }
-    $().ready(init);
+    $(init);
 }
