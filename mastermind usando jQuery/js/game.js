@@ -65,13 +65,10 @@
 
         let $emptyCircle;
         let $checkCircle;
-        /* Insert the row of circles to paint */
         for (let i = 0; i < 4; i++) {
             $emptyCircle = $('<div class="circleFill circleFill'+linesCount+'"></div>');
             $rowCirclesToFill.append($emptyCircle);
         }
-
-        /* Insert the row of check circles */
         for (let i = 0; i < 4; i++) {
             $checkCircle = $('<div class="circleCheck circleCheck'+linesCount+'"></div>');
             $rowCirclesToCheck.append($checkCircle);
@@ -107,6 +104,7 @@
             }
         return hits;
     }
+
     let paintWhite=($rowChecked,hits)=>{
         if ($rowChecked.displaced > 0) {
             for (let i = 0; i < $rowChecked.displaced; i++) {
@@ -115,6 +113,7 @@
             }
         }
     }
+
     let generateArray =()=>{
         let arrayToCheck = [];     
         $circlesToFill.each(function(index,element){
