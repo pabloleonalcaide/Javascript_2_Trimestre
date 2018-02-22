@@ -1,0 +1,72 @@
+a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+ul {
+  list-style: none;
+  padding-left: 20px;
+}
+#container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: 550px;
+}
+#cartel {
+  margin: 0 auto;
+}
+.sectionHeader,
+footer,
+header {
+  background-color: #3f51b5;
+  color: #f4f4f4;
+}
+header {
+  display: grid;
+  grid-template-columns: 40% 10%;
+  justify-content: space-between;
+}
+header h1 {
+  margin: 0;
+  padding: 5px;
+}
+header a {
+  margin-top: 20px;
+}
+nav {
+  background-color: #c5cae9;
+}
+nav li,
+nav a {
+  padding: 10px;
+  color: #3f51b5;
+}
+nav .navLink:hover {
+  background-color: #3f51b5;
+  color: #f4f4f4;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+#formRegister {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+}
+#formRegister input {
+  display: block;
+  width: 100%;
+}
+#formRegister input[type="text"],
+#formRegister input[type="email"] {
+  border: none;
+  margin-top: 10px;
+  background-color: transparent;
+  border-bottom: 1px solid #3f51b5;
+}
+#submit {
+  margin-top: 15px;
+}

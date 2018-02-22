@@ -1,0 +1,67 @@
+$primaryColor = #3F51B5
+$secondaryColor = #C5CAE9
+$primaryText = #f4f4f4
+
+a
+	text-decoration none
+	color $primaryText
+ul
+	list-style none
+	padding-left 20px
+
+#container
+	display grid
+	grid-template-columns 20% 80%
+	height 550px
+#cartel 
+	margin 0 auto
+
+.sectionHeader
+footer
+header
+	background-color $primaryColor 
+	color $primaryText
+
+header
+	display grid
+	grid-template-columns 40% 10%
+	justify-content space-between
+	h1
+		margin 0
+		padding 5px
+	a
+		margin-top 20px
+		
+nav 
+	background-color $secondaryColor
+	li
+	a
+		padding 10px
+		color $primaryColor
+	.navLink:hover
+			background-color $primaryColor
+			color $primaryText
+footer
+	position fixed
+	bottom 0
+	width 100%
+	text-align center
+	
+
+//Registro Usuarios
+#formRegister
+	width: 30%
+	margin 0 auto
+	margin-top 30px
+	text-align center
+	input
+		display block
+		width 100%
+		&[type="text"]
+		&[type="email"]
+			border none
+			margin-top 10px
+			background-color transparent
+			border-bottom 1px solid $primaryColor
+#submit
+	margin-top 15px
