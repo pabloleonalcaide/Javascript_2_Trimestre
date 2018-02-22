@@ -7,8 +7,7 @@
     let linesCount;
     let $circlesToFill;
     let $circlesToCheck;
-    let hits;
-    let $rowChecked;
+
     /** 
     * start a new game
     * @see mastermind.js
@@ -85,31 +84,31 @@
     */
     let checkRow = () => {
         if (counter >= 4) {
-            $rowChecked = mastermind.comprobarCoincidencia(generateArray());
-            hits = paintBlack();
+            let $rowChecked = mastermind.comprobarCoincidencia(generateArray());
+            let negras = paintBlack($rowChecked.inSite);
 
-            if (hits == 4)
+            if (negras == 4)
                 openWinnerDialog();
             else{
-                paintWhite();
+                paintWhite($rowChecked.displaced,negras);
                 generateNewLine();
             }
         }
     }
-    let paintBlack=()=>{
-        hits = 0;       
-            while (hits < $rowChecked.inSite) {
+    let paintBlack=(negras)=>{
+        let hits = 0;       
+            while (hits < negras) {
                     $circlesToCheck[hits].style = "background-color: black;";
                     hits++;
             }
         return hits;
     }
 
-    let paintWhite=()=>{
-        if ($rowChecked.displaced > 0) {
-            for (let i = 0; i < $rowChecked.displaced; i++) {
-                $circlesToCheck[hits].style = "background-color: white;";
-                    hits++;
+    let paintWhite=(blancas,negras)=>{
+        if (blancas > 0) {
+            for (let i = 0; i < blancas; i++) {
+                $circlesToCheck[negras].style = "background-color: white;";
+                negras++;
             }
         }
     }
