@@ -1,0 +1,61 @@
+/** Pablo Leon Alcaide */
+body {
+  background: #3f51b5;
+  font-family: 'Roboto', sans-serif;
+}
+.form {
+  background: #fff;
+  max-width: 350px;
+  margin: 20px auto;
+  padding: 45px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.2), 0 5px 5px 0 rgba(0,0,0,0.24);
+}
+.form h3 {
+  margin-top: 0;
+}
+.form input {
+  outline: 0;
+  width: 100%;
+  background: none;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #757575;
+  padding: 15px;
+  font-size: 14px;
+  margin: 0 0 15px;
+  box-sizing: border-box;
+}
+.form input:focus {
+  border-bottom: 1px solid #3f51b5;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #3f51b5;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #f4f4f4;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.form button:hover,
+.form button:active {
+  background: #3572b5;
+}
+.form button a {
+  color: #f4f4f4;
+  text-decoration: none;
+}
+.form .register {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .register a {
+  color: #3f51b5;
+  text-decoration: none;
+}

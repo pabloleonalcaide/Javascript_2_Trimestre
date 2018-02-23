@@ -9,7 +9,6 @@ ul {
 #container {
   display: grid;
   grid-template-columns: 20% 80%;
-  height: 550px;
 }
 #cartel {
   margin: 0 auto;
@@ -44,10 +43,11 @@ nav .navLink:hover {
   background-color: #3f51b5;
   color: #f4f4f4;
 }
+main {
+  padding-left: 5px;
+  overflow: scroll;
+}
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   text-align: center;
 }
 #formRegister {
@@ -69,4 +69,24 @@ footer {
 }
 #submit {
   margin-top: 15px;
+}
+#formActivity {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+}
+#formActivity input {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+}
+#formActivity input:not([type='submit']) {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #3f51b5;
+}
+#formActivity textarea {
+  margin-top: 10px;
+  width: 90%;
 }

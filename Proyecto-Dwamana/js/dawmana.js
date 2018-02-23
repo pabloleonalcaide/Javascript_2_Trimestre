@@ -17,7 +17,7 @@
 	/** Efecto inicial*/
 	let efectoInicio = ()=>{
 		$('#cartel').delay(2000).toggle("slide");
-		$('nav').hide().delay(2200).toggle("slide",{direction: "right"})
+		//$('nav').hide().delay(2200).toggle("slide",{direction: "right"})
 	}
 
 
