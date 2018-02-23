@@ -34,8 +34,8 @@ En años anteriores, el elevado número de asistentes provocó algunos problemas
 ### Patrocinadores.
 
 Además, dada la calidad de los ponentes, en ocasiones se necesita un patrocinador para cubrir los gastos del ponente que acude desde fuera de Córdoba. Necesitamos patrocinadores.
-Acceso de usuarios registrados (ponentes)
 
+Acceso de usuarios registrados (ponentes)
     * Usuario. Se validará un mínimo de 6 caracteres sin espacio
     * Contraseña. Se validará la complejidad de la contraseña (mínimo de 6 caracteres, validar que mezcle mayúsculas, minúscular, números y caracteres de puntuación)
     * Botón iniciar sesión. Se validarán los campos y en caso de no superarse la validación se mostrará un mensaje de error.
