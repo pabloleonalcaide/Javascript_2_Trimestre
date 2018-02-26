@@ -16,10 +16,9 @@
 	}
 	/** Efecto inicial*/
 	let efectoInicio = ()=>{
+		$('nav').hide().delay(2200).toggle("slide",{direction: "left"})
 		$('#cartel').delay(2000).toggle("slide");
-		//$('nav').hide().delay(2200).toggle("slide",{direction: "right"})
 	}
-
 
 	$().ready(init)
 }

@@ -1,0 +1,20 @@
+{
+	"actividades":[
+		{
+			"ponente": "Eduardo Sánchez", 
+			"titulo": "Geolocalización de usuarios sin GPS", 
+			"empresa" : "IES Fidiana",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2017/05/Edu_Sanchez-e1504773381167.jpg",
+			"breve" : "Cómo pueden geolozalizar usuarios sin GPS y herramientas de uso",
+			"extenso" : "Cómo pueden geolozalizar usuarios sin GPS y herramientas de uso. Cómo pueden geolozalizar usuarios sin GPS y herramientas de uso"
+		},
+		{
+			"ponente": "Miguel Arroyo", 
+			"titulo": "Introducción al análisis de binarios", 
+			"empresa" : "SVT CLOUD",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2017/05/MiguelAngel_Arroyo-1-e1504773318775.jpg",
+			"breve" :"El objetivo de la charla es el de introducir a los asistentes en el análisis de binarios,",
+			"extenso" : "El objetivo de la charla es el de introducir a los asistentes en el análisis de binarios, uno de las áreas más complejas y potentes del cambo de la seguridad informática, indicando en qué campos de la seguridad es útil este conocimiento y se hará una demostración práctica con el análisis de varios binarios."
+		}
+	]
+}
