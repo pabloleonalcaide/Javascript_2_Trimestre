@@ -8,7 +8,7 @@ ul {
 }
 #container {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 25% 75%;
 }
 #cartel {
   margin: 0 auto;
@@ -45,10 +45,21 @@ nav .navLink:hover {
 }
 main {
   padding-left: 5px;
-  overflow: scroll;
+  min-height: 540px;
 }
 footer {
   text-align: center;
+}
+footer a img {
+  vertical-align: middle;
+  padding: 0 5px 0 5px;
+  width: 80px;
+  height: auto;
+}
+.actividad {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin: 5px;
+  padding: 5px;
 }
 #formRegister {
   width: 30%;
@@ -63,30 +74,43 @@ footer {
 #formRegister input[type="text"],
 #formRegister input[type="email"] {
   border: none;
-  margin-top: 10px;
+  margin-top: 15px;
   background-color: transparent;
   border-bottom: 1px solid #3f51b5;
 }
 #submit {
   margin-top: 15px;
 }
+#formPonente,
 #formActivity {
   width: 60%;
   margin: 0 auto;
   margin-top: 30px;
   text-align: center;
 }
+#formPonente input,
 #formActivity input {
   display: block;
   width: 100%;
   margin-top: 12px;
 }
+#formPonente input:not([type='submit']),
 #formActivity input:not([type='submit']) {
   border: none;
   background-color: transparent;
   border-bottom: 1px solid #3f51b5;
 }
+#formPonente textarea,
 #formActivity textarea {
   margin-top: 10px;
   width: 90%;
+}
+#formPonente select,
+#formActivity select {
+  display: block;
+  margin: 10px auto;
+}
+form span {
+  font-size: 0.8rem;
+  color: #f00;
 }

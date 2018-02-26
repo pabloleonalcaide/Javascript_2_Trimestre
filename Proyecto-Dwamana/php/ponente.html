@@ -1,0 +1,24 @@
+<head>	<script src="./js/ponentes.js" type="text/javascript" charset="utf-8"  ></script></head>
+<h2 class="sectionHeader"> Registro de Ponente </h2>
+<form id="formPonente">
+	<fieldset>
+		<input type="text" class="comprobar" id="nombrePonente" placeholder="nombre"><span id="errNombrePonente"></span>
+		<input type="text" class="comprobar" id="apellidosPonente" placeholder="apellidos"><span id="errApellidosPonente"></span>
+		<input type="text" class="comprobar" id="empresaPonente" placeholder="Empresa/Organismo"><span id="errEmpresaPonente"></span>
+		<br><label>Posibilidad de patrocinio:
+			<select id="selectPonente">
+				<option value="no">No</option>
+				<option value="interno">Mi empresa</option>
+				<option value="externo">Otro</option>
+			</select>
+		</label>
+		<label>Día preferible:
+		<input type="text" id="datepicker"></label>
+		<textarea class="comprobar" placeholder="Observaciones..."></textarea>
+		<input type="submit" id="submit" value="guardar">
+	</fieldset>
+</form>
+<div id="dialog-message" title="Datos actualizados">
+  <p>Los cambios se han realizado con éxito</p>
+  <p>Recuerda que puedes volver a esta sección para editar cualquier dato</p>
+</div>

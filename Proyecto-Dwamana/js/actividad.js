@@ -32,7 +32,7 @@ let mostrarConfirmacion = ()=>{
 let anadirActividad = (event)=>{
 	event.preventDefault();
 	$('.anadirActividad').remove();
-	$('.submitActividad').remove();
+	$('.submitActividad').remove();	
 	$.get('./php/actividad.html',function(data){
 		$('#extra').append(data);
 	});

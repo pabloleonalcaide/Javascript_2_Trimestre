@@ -1,11 +1,17 @@
+<head><script src="./js/registro.js" type="text/javascript" charset="utf-8"></script></head>
 <h2 class="sectionHeader"> Registro de Asistencia </h2>
 <form id="formRegister">
 	<fieldset>
-		<input type="text" name="" placeholder="nombre">
-		<input type="text" name="" placeholder="apellidos">
-		<input type="text" name="" placeholder="dni">
-		<input type="email" placeholder="yourMail@domain.es">
-		<input type="text"  placeholder="procedencia">
+		<input type="text" id="nombreRegistro" placeholder="nombre"><span id="errNombreRegistro"></span>
+		<input type="text" placeholder="apellidos" id="apellidosRegistro" ><span id="errApellidosRegistro"></span>
+		<input type="text" placeholder="dni" id="dniRegistro" ><span id="errDniRegistro"></span>
+		<input type="email" placeholder="yourMail@domain.es" id="mailRegistro" ><span id="errMailRegistro"></span>
+		<input type="text"  placeholder="procedencia" id="procedenciaRegistro" ><span id="errProcedenciaRegistro"></span>
 		<input type="submit" value="Registrar" id="submit">
 	</fieldset>
 </form>
+<div id="dialog-message" title="Confirmado!">
+  <p>Te has registrado con éxito</p>
+  <p>Recibirás un email de confirmación</p>
+  <p>También puedes seguir todas las novedades en el <a href="https://telegram.me/Dawmana2018">Canal</a> de Telegram</p>
+</div>
