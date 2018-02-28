@@ -45,6 +45,7 @@
 	*/
 	let comprobarUsuario = () =>{
 		$.getJSON('./js/usuarios.json',function(data) {	
+			console.log(data);
 			$.each(data['usuarios'],function(key,value){
 				if((value['usuario'] == $userInput.val()) && value['password'] == $passInput.val()){
 					window.location = "./index.html";

@@ -3,7 +3,7 @@
 let cargarScript = ()=>{
 	$dia= $('#dia');
 	 $( "#tabs" ).tabs();
-	 $('#tabs >ul >li >a').click(function(){cargarDatos($(this).html())});
+	 $('#tabs >ul >li >a').click(function(){mostrarDatos(cargarDatos($(this).html()))});
 	 $('.actividad').click(function(){console.log("hola");});
 }
 
@@ -15,24 +15,24 @@ let cargarDatos =(dia)=>{
 	switch(dia){
 		case 'Lunes':
 			$.getJSON('./js/lunes.json', function(data) {
-				mostrarDatos(data['actividades']);	
-			});break;
+				return data['actividades'];	
+			});
 		case 'Martes':
 			$.getJSON('./js/martes.json', function(data) {
-				mostrarDatos(data['actividades']);	
-			});break;
+				return data['actividades'];	
+			});
 		case 'Miercoles':
 			$.getJSON('./js/miercoles.json', function(data) {
-				mostrarDatos(data['actividades']);	
-			});break;
+				return data['actividades'];	
+			});
 		case 'Jueves':
 			$.getJSON('./js/jueves.json', function(data) {
-				mostrarDatos(data['actividades']);	
-			});break;
+				return data['actividades'];	
+			});
 		case 'Viernes':
 			$.getJSON('./js/viernes.json', function(data) {
-				mostrarDatos(data['actividades']);	
-			});break;
+				return data['actividades'];	
+			});
 	}
 	
 }
