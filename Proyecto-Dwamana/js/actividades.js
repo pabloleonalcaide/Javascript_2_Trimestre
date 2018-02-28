@@ -1,10 +1,10 @@
 {
 	let $dia;
-let cargarScript = ()=>{
+	let init = ()=>{
 	$dia= $('#dia');
-	 $( "#tabs" ).tabs();
-	 $('#tabs >ul >li >a').click(function(){cargarDatos($(this).html())});
-	 $('.actividad').click(function(){console.log("hola");});
+	$( "#tabs" ).tabs();
+	$('#tabs >ul >li >a').click(function(){ cargarDatos($(this).html())
+								});
 }
 
 /**
@@ -15,23 +15,23 @@ let cargarDatos =(dia)=>{
 	switch(dia){
 		case 'Lunes':
 			$.getJSON('./js/lunes.json', function(data) {
-				mostrarDatos(data['actividades']);	
+				mostrarDatos(data['actividades']);
 			});break;
 		case 'Martes':
 			$.getJSON('./js/martes.json', function(data) {
-				mostrarDatos(data['actividades']);	
+				mostrarDatos(data['actividades']);
 			});break;
 		case 'Miercoles':
 			$.getJSON('./js/miercoles.json', function(data) {
-				mostrarDatos(data['actividades']);	
+				mostrarDatos(data['actividades']);
 			});break;
 		case 'Jueves':
 			$.getJSON('./js/jueves.json', function(data) {
-				mostrarDatos(data['actividades']);	
+				mostrarDatos(data['actividades']);
 			});break;
 		case 'Viernes':
 			$.getJSON('./js/viernes.json', function(data) {
-				mostrarDatos(data['actividades']);	
+				mostrarDatos(data['actividades']);
 			});break;
 	}
 	
@@ -39,8 +39,8 @@ let cargarDatos =(dia)=>{
 /**
 * vuelca cada ponencia de un día concreto
 */
-let mostrarDatos = (datos)=>{
-	$.each(datos,function(key,value){
+let mostrarDatos = ($datos)=>{
+	$.each($datos,function(key,value){
 		let $ponencia = $('<div class="actividad"></div>').prop('title',value.breve);
 		let $imagen = $('<img>').prop('src',value.imagen);
 		let $ponente = $('<p></p>').html(value.ponente);
@@ -59,6 +59,6 @@ let mostrarOcultar = ($ponencia)=>{
 	$ponencia.click(function(event){
 			$(this).children('.extenso').toggle();
 		});
-}
-$(cargarScript);
+	}
+$().ready(init);
 }

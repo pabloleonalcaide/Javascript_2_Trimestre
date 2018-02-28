@@ -1,6 +1,6 @@
 {
 	"usuarios":[
-		{"usuario": "Nacho Álvarez", "titulo": "Sistemas de control de versiones distribuidas"},
-		{"usuario": "Nacho Álvarez", "titulo": "Servicios web con Python & web.py"}
+		{"usuario": "usuario", "password": "Contraseña123!"},
+    	{"usuario": "dawmana", "password": "Dawmana123!"}
 	]
 }
