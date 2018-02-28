@@ -6,7 +6,8 @@
 			"empresa" : "Redsys",
 			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2014/02/03jialvarez-2-1.jpg",
 			"breve" : "Se mostrarán los comandos de git sobre repositorios de ejemplo reales de forma interactiva",
-			"extenso" : "Se mostrarán los comandos de git sobre repositorios de ejemplo reales de forma interactiva. También se darán sus alternativas sobre interfaz gráfica y se comentarán las estrategias de merge más efectivas."		},
+			"extenso" : "Se mostrarán los comandos de git sobre repositorios de ejemplo reales de forma interactiva. También se darán sus alternativas sobre interfaz gráfica y se comentarán las estrategias de merge más efectivas."
+		},
 		{
 			"ponente": "Nacho Álvarez", 
 			"titulo": "Servicios web con python y web.py", 
