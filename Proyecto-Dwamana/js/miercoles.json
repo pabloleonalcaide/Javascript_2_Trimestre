@@ -1,0 +1,61 @@
+{
+	"actividades":[
+
+		{
+			"ponente": "Claudia López Iglesias", 
+			"titulo": "Design IS + workshop -Diseño con Illustrator- (Iniciación)", 
+			"empresa" : "N/A",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2017/05/Claudia_Lopez-e1504770601540.jpg",
+			"breve" : "Breves conceptos de diseño sobre color, fundamentos de diseño, composición, tipografía y tendencias 2018",
+			"extenso" : "Iniciación a Illustrator CC (nivel básico) : herramientas, espacios de trabajo, documentos (exportar y tipos), gestión del color, tipografías…"
+		},
+		{
+			"ponente": "Javier Jiménez", 
+			"titulo": "Cloud computing y AWS", 
+			"empresa" : "Gray Hats",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/logo_grayhtats_400x400.png",
+			"breve" : "Charla sobre cloud computing, amazon web services y salidas profesionales",
+			"extenso" : "Contenido extra muy extra, y mas contenido de relleno para que tenga algo más de relleno"
+		},
+		{
+			"ponente": " Rafa Sojo", 
+			"titulo": "CTF", 
+			"empresa" : "IES Gran Capitán",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/RafaSojo_400x400.jpg",
+			"breve" : "CTF",
+			"extenso" : "Nuestros alumnos competirán en grupos en un CTF organizado por Rafa Sojo. ¿Quién Ganará?"
+		},
+		{
+			"ponente": " Rafa Sojo", 
+			"titulo": "Web scraping like a ninja", 
+			"empresa" : "IES Gran Capitán",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/RafaSojo_400x400.jpg",
+			"breve" : "Qué es web scraping y técnicas y herramientas de uso",
+			"extenso" : "Qué es web scraping y técnicas y herramientas de uso..."
+		},
+		{
+			"ponente": "Rafael Rodríguez", 
+			"titulo": "Coworking", 
+			"empresa" : "LaZona",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/Logo_Lazona400x400.png",
+			"breve" : "Los espacios de trabajo colaborativo o coworkings son una alternativa que permite a trabajadores autónomos y pequeñas empresas compartir en su día a día ideas, proyectos, contactos…",
+			"extenso" : "a la vez que reducen y flexibilizan los costes fijos que supone mantener una oficina propia."
+		},
+		{
+			"ponente": "Javier Aguirre", 
+			"titulo": "Chatbots", 
+			"empresa" : "Repli.ai",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/JavierAguirre_400x400.jpg",
+			"breve" : "Chatbots! ",
+			"extenso" : "Todo el mundo habla de ellos, pero qué son y por dónde empezar? Veremos de dónde vienen los chatbots y cómo empezar a implementar uno"
+		},
+		{
+			"ponente": "Cristina Santamarina", 
+			"titulo": "Taller sobre Bots 102", 
+			"empresa" : "TheNeonProject",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/CristinaSantamarina_400x400.jpg",
+			"breve" : "Aprenderemos a diseñar un chatbot con Chatfuel y Dialogflow",
+			"extenso" : "...Contenido extra "
+		}
+	]
+}

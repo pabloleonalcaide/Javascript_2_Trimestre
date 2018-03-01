@@ -20,5 +20,5 @@
 		$('#cartel').delay(2000).toggle("slide");
 	}
 
-	$().ready(init)
+	$(init)
 }

@@ -1,0 +1,45 @@
+{
+	"actividades":[
+
+		{
+			"ponente": "Raúl Valentín", 
+			"titulo": "Cómo construir un modelo predictivo con Machine Learning", 
+			"empresa" : "Hospital San Juan de Dios",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2017/09/RaulValentin.jpg",
+			"breve" : "Entre todos construiremos un modelo predictivo",
+			"extenso" : "Un grupo de alumnos será nuestro conjunto de datos de entrenamiento con los que entrenaremos el modelo. Una vez construido el modelo otro grupo de alumnos lo testeará y determinaremos su rendimiento."
+		},
+				{
+			"ponente": "Manuel Jimenez", 
+			"titulo": "Producción en Realidad Virtual", 
+			"empresa" : "N/A",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/ManuelJimenez_400x400_2018.jpg",
+			"breve" : "Taller introductorio al uso de CoSpaces",
+			"extenso" : " una herramienta web que permite de forma sencilla y directa producir escenas inmersivas e interactivas"
+		},
+		{
+			"ponente": "Rafael Gómez", 
+			"titulo": "Cloud y contenerización con Docker", 
+			"empresa" : "Innovation Group",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/Logo_Innovation_Group400x400.png",
+			"breve" : "Docker",
+			"extenso" : "Charla sobre Cloud, Docker, Puppet y Devops"
+		},
+				{
+			"ponente": "Cristina Treviño Pepe Molinero", 
+			"titulo": "Crea tu propia nube", 
+			"empresa" : "Alumnos de IES Gran Capitán",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/Cristina_Triviño_Pepe_Molinero.jpg",
+			"breve" : "Implementación y explicación de servicio Web y de Nextcloud en una raspberry pi 3",
+			"extenso" : "etc etc"
+		},
+		{
+			"ponente": "Alvaro Mesa , Raul Zarza y Antonio Arteche", 
+			"titulo": "Testing en el marco de trabajo Scrum", 
+			"empresa" : "Innovation Group",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/Logo_Innovation_Group400x400.png",
+			"breve" : "Charla sobre las fases de vida de desarrollo software en el marco de Scrum",
+			"extenso" : "Charla sobre las fases de vida de desarrollo software en el marco de Scrum y las actividades que un tester lleva a cabo en cada una de ellas para asegurar la calidad del software"
+		}
+	]
+}

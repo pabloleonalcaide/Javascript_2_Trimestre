@@ -15,6 +15,22 @@
 			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2017/05/MiguelAngel_Arroyo-1-e1504773318775.jpg",
 			"breve" :"El objetivo de la charla es el de introducir a los asistentes en el análisis de binarios",
 			"extenso" : "El objetivo de la charla es el de introducir a los asistentes en el análisis de binarios, uno de las áreas más complejas y potentes del cambo de la seguridad informática, indicando en qué campos de la seguridad es útil este conocimiento y se hará una demostración práctica con el análisis de varios binarios."
+		},
+		{
+			"ponente": " JL García-Morato y José Huertas", 
+			"titulo": "Digital MKG: herramientas para analizar webs", 
+			"empresa" : "Dobuss",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2017/05/dobuss-e1504774150983.jpeg",
+			"breve" : "Repaso de herramientas usadas en el Marketing Digital para analizar webs",
+			"extenso" : "Cómo pueden geolozalizar usuarios sin GPS y herramientas de uso. Cómo pueden geolozalizar usuarios sin GPS y herramientas de uso"
+		},
+		{
+			"ponente": " Nicolás García Pedrajas", 
+			"titulo": "Deep-Learning", 
+			"empresa" : "UCO",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2014/02/10nicolasgarcia-150x150-1.jpg",
+			"breve" :"Aprendizaje automático basados en asimilar representaciones de datos",
+			"extenso" : "En este paradigma los algoritmos son capaces de aprender sin intervención humana previa, sacando ellos mismos las conclusiones acerca de la semántica embebida en los datos."
 		}
 	]
 }

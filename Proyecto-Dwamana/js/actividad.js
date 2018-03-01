@@ -17,6 +17,9 @@ let guardarActividad = (event)=>{
 	$('textarea').val('');
 	mostrarConfirmacion();
 }
+/**
+* Lanza un mensaje de confirmación
+*/
 let mostrarConfirmacion = ()=>{
     $( "#dialog-message" ).dialog("open");
     $( "#dialog-message" ).dialog({
@@ -29,6 +32,9 @@ let mostrarConfirmacion = ()=>{
   });
 }
 
+/**
+* Añade otro formulario de actividad
+*/
 let anadirActividad = (event)=>{
 	event.preventDefault();
 	$('.anadirActividad').remove();

@@ -15,6 +15,38 @@
 			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2014/02/03jialvarez-2-1.jpg",
 			"breve" :"Se repasará la descripción de servicios Web y tecnologías SOAP/REST",
 			"extenso" : "Se repasará la descripción de servicios Web y tecnologías SOAP/REST. A continuación, se presenta el microframework web.py desarrollado por Aaron Swartz para la generación y despliegue de servicios Web."
+		},
+		{
+			"ponente" : "Fco Javier Carazo",
+			"titulo" : "WooCommerce: crea tu propia tienda online",
+			"empresa" : "Codection",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/FcoJavierCarazo_400x400.jpeg",
+			"breve" : "WooCommerce es el estándar de facto para crear tiendas online a día de hoy.",
+			"extenso" : "Sus ventajas son muchas, pero hay dos que destacan, la 1ª de ellas es que usa WordPress. La 2ª es que es realmente fácil de instalar, de mantener y de administrar "
+		},
+		{
+			"ponente" : "Rafael Delgado",
+			"titulo" : "Envenenamiento DNS",
+			"empresa" : "Alumno de IES Gran Capitán",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/RafaDelgado_400x400.jpg",
+			"breve" : " Realizaré una prueba de ataque real en directo y explicaré cómo funciona esta vulnerabilidad",
+			"extenso" : "Es una situación creada de manera maliciosa que provee datos manipulados de un servidor DNS falso, con el objetivo de robar información al usuario. Realizaré una prueba de ataque real en directo y explicaré cómo funciona esta vulnerabilidad"
+		},
+		{
+			"ponente" : "Rafael Mellado y Daniel Gestino",
+			"titulo" : "Envenenamiento DNS",
+			"empresa" : "Alumnos de IES Gran Capitán",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/RafaMellado_DanielGestino.jpg",
+			"breve" : " Realizaremos un taller de iniciación en Angular 5 y Angular Material",
+			"extenso" : "Realizaremos un taller de iniciación en Angular 5 y Angular Material en el que explicaremos las características más importantes de angular para los principiantes y haremos un taller guiado con una búsqueda “en caliente” de diferentes elementos"
+		},
+		{
+			"ponente" : "Nieves Borrero y Pablo León",
+			"titulo" : "Tweepy. Cuando Python escucha lo que dice un pajarito",
+			"empresa" : "Alumnos de IES Gran Capitán",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/NievesBorrero_PabloLeon.jpg",
+			"breve" : "Una charla sobre las posibilidades que nos ofrece Tweepy",
+			"extenso" : "una librería de Python que nos permite trabajar de forma sencilla con la API de twitter."
 		}
 	]
 }

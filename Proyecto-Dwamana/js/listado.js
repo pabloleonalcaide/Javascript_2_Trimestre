@@ -1,6 +1,5 @@
 {
 	let callback = () =>{
-		console.log($('.ponente'));
 	}
 	let $lista;
 	let $ponentes;
@@ -39,7 +38,9 @@
 		$lista.append($div);
 		});
 	}
-
+	/**
+	* muestra los ponentes del día indicado
+	*/
 	let mostrarDia =(dia)=>{
 		switch(dia){
 			case 'Lunes':

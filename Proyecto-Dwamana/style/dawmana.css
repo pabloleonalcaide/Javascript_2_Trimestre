@@ -30,6 +30,10 @@ header h1 {
 }
 header a {
   margin-top: 20px;
+  text-align: center;
+}
+header a:hover {
+  color: #ffc107;
 }
 nav {
   background-color: #c5cae9;
@@ -39,8 +43,10 @@ nav a {
   padding: 10px;
   color: #3f51b5;
 }
-nav .navLink:hover {
+.seccion:hover {
   background-color: #3f51b5;
+}
+.seccion:hover a {
   color: #f4f4f4;
 }
 main {
@@ -67,10 +73,13 @@ footer a img {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 #formRegister {
-  width: 30%;
+  width: 50%;
   margin: 0 auto;
   margin-top: 30px;
   text-align: center;
+}
+#formRegister textarea {
+  margin-top: 15px;
 }
 #formRegister input {
   display: block;
@@ -115,6 +124,9 @@ footer a img {
   display: block;
   margin: 10px auto;
 }
+form {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
 form span {
   font-size: 0.8rem;
   color: #f00;
@@ -131,4 +143,15 @@ form span {
   border-radius: 100px;
   border-radius: 1px solid #3f51b5;
   width: 200px;
+}
+.cartel {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+#datepicker2,
+#datepicker {
+  width: 45% !important;
+  display: inline-block !important;
 }
