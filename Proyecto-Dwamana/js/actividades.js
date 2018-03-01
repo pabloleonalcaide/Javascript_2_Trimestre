@@ -3,8 +3,12 @@
 	let init = ()=>{
 	$dia= $('#dia');
 	$( "#tabs" ).tabs();
-	$('#tabs >ul >li >a').click(function(){ cargarDatos($(this).html())
-								});
+	$('#tabs >ul >li >a').click(function(){ cargarDatos($(this).html())});
+	    $($dia).tooltip({
+      		hide: {
+        		effect: "explode",
+       		 	delay: 250
+      		}
 }
 
 /**
@@ -57,8 +61,8 @@ let mostrarDatos = ($datos)=>{
 */
 let mostrarOcultar = ($ponencia)=>{
 	$ponencia.click(function(event){
-			$(this).children('.extenso').toggle();
+			$(this).children('.extenso').toggle("slow");
 		});
 	}
-$().ready(init);
+$(init);
 }

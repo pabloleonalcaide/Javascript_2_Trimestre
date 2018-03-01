@@ -1,0 +1,31 @@
+{
+	"carteles":[
+		{
+            "ruta" :"http://informatica.iesgrancapitan.org/wp-content/uploads/2011/10/cartelsysmana2009.jpg"
+        },
+    	{
+            "ruta" :"http://informatica.iesgrancapitan.org/wp-content/uploads/2012/05/sysmana2010-212x300.jpg"
+        },
+    	{
+            "ruta" :"http://informatica.iesgrancapitan.org/wp-content/uploads/2012/05/sysmana2011.jpg"
+        },
+    	{
+            "ruta" :"http://informatica.iesgrancapitan.org/wp-content/uploads/2012/05/sysmana2012.jpg"
+        },
+    	{
+            "ruta" :"http://informatica.iesgrancapitan.org/wp-content/uploads/2013/02/Cartelsysmana-Recuperado-1.jpg"
+        },
+    	{
+            "ruta" :"http://informatica.iesgrancapitan.org/wp-content/uploads/2014/02/sysmana2014.jpg"
+        },
+    	{
+            "ruta" :"http://informatica.iesgrancapitan.org/wp-content/uploads/2015/02/sysmana2015.jpg"
+        },
+    	{
+            "ruta" :"http://informatica.iesgrancapitan.org/wp-content/uploads/2017/09/sysmana2016-720.jpg"
+        },
+    	{
+            "ruta" :"http://informatica.iesgrancapitan.org/sysmanas/sysmana-ix/"
+        }
+	]
+}

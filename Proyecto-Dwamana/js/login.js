@@ -10,10 +10,10 @@
 		$passwdSpan = $('#errorPswd')
 		$userInput = $('#user');
 		$passInput = $('#password');
-		$userInput.bind("blur",function(event){
+		$userInput.blur(function(event){
 			validarInput($(this),$userSpan);
 		})
-		$('#password').bind("blur",function(event){
+		$('#password').blur(function(event){
 			validarPassword($(this),$passwdSpan);
 		})
 		$('button').click(validarCampos);
@@ -44,15 +44,16 @@
 	* En nuestro caso, al no utilizar una base de datos, enfrentamos los inputs con un objeto json
 	*/
 	let comprobarUsuario = () =>{
+		let validado = false;
 		$.getJSON('./js/usuarios.json',function(data) {	
-			console.log(data);
 			$.each(data['usuarios'],function(key,value){
 				if((value['usuario'] == $userInput.val()) && value['password'] == $passInput.val()){
-					window.location = "./index.html";
+					validado = true;
+					validado ? window.location ="./index.html" : $passwdSpan.css("color","red").html("Usuario o contraseña no encontrados");	
 				}
 		})
 		})
-		$passwdSpan.css("color","red").html("Usuario o contraseña no encontrados");	
+			
 	}
 	$().ready(init);
 }

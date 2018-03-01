@@ -1,0 +1,53 @@
+{
+	"actividades":[
+
+		{
+			"ponente": "David Fernández Gómez, Antonio David Ventura Serrano y Francisco Llamas Nuflo", 
+			"titulo": "Criptomonedas y altcoin", 
+			"empresa" : "Alumnos de IES Gran Capitán",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/LlamasFran_FernandezDavid_Sysmana2018.jpg",
+			"breve" : "criptomonedas",
+			"extenso" : "Introducción al mundo de las criptomonedas. Herramientas, utilidades, monederos, minería."
+		},
+				{
+			"ponente": "Juan Antonio Romero", 
+			"titulo": "Iniciación al desarrollo de servicios REST", 
+			"empresa" : "Sopinet",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/JuanAntonioRomero2018_400x400.jpg",
+			"breve" : "Introducción al desarrollo de una REST API.",
+			"extenso" : " Veremos los motivos para desarrollar aplicaciones con esta arquitectura y la teoría para llevarlo a cabo, tratando de seguir las buenas prácticas."
+		},
+				{
+			"ponente": "Fernando Hidalgo", 
+			"titulo": "Mas allá de Agile", 
+			"empresa" : "Sopinet",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/FernandoHidalgo2018_400x400.jpg",
+			"breve" : "Cómo se estructura Sopinet Software y cómo se implementa nuestra ambiciosa filosofía, basada en tres pilares Agile: Transparencia, Sin miedo y Valor humano",
+			"extenso" : "En ella, de: Nuestra política salarial, transparente y establecida a través de fórmulas Nuestra transparencia y métricas implementada con nuestras bombillas inteligentes etc…"
+		},
+				{
+			"ponente": " Ana María Cuenca  María Moreno  Nieves Borrero Soledad Cruz", 
+			"titulo": "¿Igualdad de género en el mundo tecnológico? ", 
+			"empresa" : "Alumnas IES Gran Capitán",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/Brecha_digital_sysmana2018.jpg",
+			"breve" : "Brecha Digital",
+			"extenso" : "¿Existe la desigualdad de género en el mundo tecnológico o, por el contrario, la tecnología reduce la desigualdad entre hombres y mujeres?"
+		},
+				{
+			"ponente": "Lucia Expósito", 
+			"titulo": "¿Soy vulnerable?", 
+			"empresa" : "SVT Cloud",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/LuciaExposito2018_400x400.jpg",
+			"breve" : "Charla sobre la vulnerabilidad móvil a través de bluetooth por blueborn",
+			"extenso" : "etc etc"
+		},
+		{
+			"ponente": "Manuel Hidalgo", 
+			"titulo": "Horus is coming.. o casi", 
+			"empresa" : "SVT Cloud",
+			"imagen" : "http://informatica.iesgrancapitan.org/wp-content/uploads/2018/01/Manuel_Hidalgo.png",
+			"breve" : "Uso de nuevas tecnologías (elk, programas open source y scripting) para monitorizar en tiempo real equipos y sus servicios.",
+			"extenso" : "etc etc"
+		}
+	]
+}
