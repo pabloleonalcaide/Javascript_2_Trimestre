@@ -9,6 +9,7 @@
         		effect: "explode",
        		 	delay: 250
       		}
+});
 }
 
 /**
