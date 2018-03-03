@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
         $("#enviar").click(function(){
           let url = $('#recurso').val();
           $.get(url,function(data,status,xhr){

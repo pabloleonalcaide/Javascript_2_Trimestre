@@ -1,6 +1,6 @@
   $(function() {
+    
       function makeAppear() {
-
           $("div").show("explode", 2000);
       };
 
