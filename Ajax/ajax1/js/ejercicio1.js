@@ -1,13 +1,22 @@
 {  
   let estadosPosibles = ['No inicializado', 'Cargando', 'Cargado', 'Interactivo', 'Completado'];
   let tiempoInicial = 0;
+  let contenidos;
+  let estados;
+  let recurso;
+  
+  let init = function() {
+      recurso = document.getElementById('recurso');
+      estados =  = document.getElementById('estados');
+      contenidos = document.getElementById('contenidos')
+      recurso.value = location.href;
+      document.getElementById('enviar').onclick = cargaContenido;
+  }
 
   let cargaContenido = function() {
-    document.getElementById('contenidos').innerHTML = "";
-    document.getElementById('estados').innerHTML = "";
- 
+    contenidos.innerHTML = "";
+    estados.innerHTML = "";
     peticion = new XMLHttpRequest();
-
     peticion.onreadystatechange = muestraContenido;
     tiempoInicial = new Date();
     let recurso = document.getElementById('recurso').value;
@@ -18,13 +27,9 @@
   let muestraContenido = function() {
     let tiempoFinal = new Date();
     let milisegundos = tiempoFinal - tiempoInicial;
- 
-    let estados = document.getElementById('estados');
     estados.innerHTML += "[" + milisegundos + " mseg.] " + estadosPosibles[peticion.readyState] + "<br/>";
  
-    if(peticion.readyState == 4) {
-      if(peticion.status == 200) {
-        let contenidos = document.getElementById('contenidos');
+    if(peticion.readyState == 4 && peticion.status == 200) {
         contenidos.innerHTML = peticion.responseText.transformaCaracteresEspeciales();
       }
       mostrarCabeceras();
@@ -42,14 +47,6 @@
       codigo.innerHTML = peticion.status + "<br/>" + peticion.statusText;        
   }
 
-  let init = function() {
-      // Carga en el input text la URL de la página
-      let recurso = document.getElementById('recurso');
-      recurso.value = location.href;
-
-      // Carga el recurso solicitado cuando se pulse el botón MOSTRAR
-      document.getElementById('enviar').onclick = cargaContenido;
-  }
 
   String.prototype.transformaCaracteresEspeciales = function() {
     return unescape(escape(this).

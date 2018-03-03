@@ -1,6 +1,5 @@
 # DAWMANA con jQuery y AJAX
 
-* Ver en [Hosting]( https://pabloleon.000webhostapp.com/Dawmana/index.html)
 *Ejercicio de clase para la asignatura 'Desarrollo Web en Entorno Cliente'*
 
 Tomando  como referencia los datos de nuestra Sysmana 2017, realiza mediante jQuery y con comunicación AJAX la página...
