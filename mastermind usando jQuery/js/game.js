@@ -35,6 +35,7 @@
         if(circle.style.backgroundColor == "transparent" || circle.style.backgroundColor == "" ||circle.style.backgroundColor == "none")
             return true
         return false
+
     }
     /**
      * Insert a color into the row if there is space
@@ -42,10 +43,11 @@
     let insertCircle = function() {
         clickedColor = this.id;
         $circlesToFill.each(function(index,element){
-            if (isEmptyCircle(element)) {
-                element.style.backgroundColor = clickedColor;
-                $(element).on("click", clean);
-                return false;
+
+        if (isEmptyCircle(element)) {
+            element.style.backgroundColor = clickedColor;
+            $(element).on("click", clean);
+            return false;
             }
         })
         if (counter < 4)
