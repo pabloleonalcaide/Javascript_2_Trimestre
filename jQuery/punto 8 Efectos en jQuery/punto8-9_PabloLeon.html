@@ -5,77 +5,57 @@
     <title>Otra cola de efectos</title>
     <script src="../jquery-3.2.1.js" type="text/javascript"></script>
     <style type="text/css">
-    body {
-        font-size: 0.75em;
-        font-family: tahoma, verdana, sans-serif;
-    }
-
-    #mensaje {
-        margin: 20px 5px; }
-
-    #micapa {
-        left: 100px;
-        top: 150px;
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        background-color: #3d3;
-    }
+        #mensaje { margin: 20px 5px; }
+        #micapa {
+            left: 100px;
+            top: 150px;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #3d3;
+        }
     </style>
     <script languague="javascript">
-    function muestraRestantesCola() {
-        let funcionesEnCola = $("#micapa").queue("micola").length;
-        let funcionesEnColaPredeterminada = $("#micapa").queue().length;
-        let textoMostrar = "Hay " + funcionesEnCola + " funciones de efectos en la cola 'micola'";
-        textoMostrar += "<br>Hay " + funcionesEnColaPredeterminada + " funciones de efectos en la cola por defecto";
-        $("#mensaje").html(textoMostrar);
-    }
+        let $capa;
+        let muestraRestantesCola = ()=> {
+            let funcionesEnCola = $capa.queue("micola").length;
+            let funcionesEnColaPredeterminada = $capa.queue().length;
+            let textoMostrar = "Hay " + funcionesEnCola + " funciones de efectos en la cola 'micola'";
+            textoMostrar += "<br>Hay " + funcionesEnColaPredeterminada + " funciones de efectos en la cola por defecto";
+            $("#mensaje").html(textoMostrar);
+        }
 
-    function cambiarColores() {
-        capa = $("#micapa");
-        capa.delay(1000, "micola");
-        capa.queue("micola", function(sig) {
-            $(this).css({
-                "background-color": "#339"
-            });
+        let cambiarColores=()=> {
+            $capa.delay(1000, "micola");
+            $capa.queue("micola", function(sig) {
+                $(this).css("background-color", "#339");
+                sig()
+            }).delay(1000, "micola");
+            $capa.queue("micola", function(sig) {
+                $(this).css("background-color", "#933");
+                sig();
+            }).delay(1000, "micola")
+            .queue("micola", function(sig) {
+                $(this).css("background-color", "#393");
+                cambiarColores();
+            }).dequeue("micola");
+        }
 
-            sig()
-        });
-        capa.delay(1000, "micola");
-        capa.queue("micola", function(sig) {
-            $(this).css({
-                "background-color": "#933"
-            });
-            sig();
-        });
-        capa.delay(1000, "micola");
-        capa.queue("micola", function(sig) {
-            $(this).css({
-                "background-color": "#393"
-            });
+        let ocultaMuestra =() => {      
+            $capa.fadeTo(500, 0.3).fadeTo(1200, 1)
+            .animate({
+                "left": "350px"
+            }, 1200)
+            .animate({
+                "left": "100px"
+            }, 1000, ocultaMuestra);
+        }
+        $(function() {
+            $capa = $("#micapa");
             cambiarColores();
+            ocultaMuestra();
+            $("#botontamanocola").click(muestraRestantesCola);
         });
-        capa.dequeue("micola");
-    }
-
-    function ocultaMuestra() {
-        capa = $("#micapa");
-        capa.fadeTo(500, 0.3);
-        capa.fadeTo(1200, 1);
-        capa.animate({
-            "left": "350px"
-        }, 1200);
-        capa.animate({
-            "left": "100px"
-        }, 1000, ocultaMuestra);
-    }
-    $(document).ready(function() {
-        cambiarColores();
-        ocultaMuestra();
-        $("#botontamanocola").click(function() {
-            muestraRestantesCola();
-        });
-    });
     </script>
 </head>
 <body>

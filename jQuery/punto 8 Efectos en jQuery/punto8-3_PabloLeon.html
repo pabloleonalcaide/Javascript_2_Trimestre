@@ -16,15 +16,17 @@ Este método recibe la duración deseada para el efecto, el valor de opacidad al
     <title>Pablo Leon - Fading en jQuery</title>
     <script src="../jquery-3.2.1.js"></script>
     <script>
-    $(document).ready(function() {
+     $lista;
+    $(function() {
+        $lista = $('#milista');
         $("#ocultartoda").click(function(e) {
-            $("#milista").fadeOut();
+            $lista.fadeOut();
         });
         $("#mostrartoda").click(function(e) {
-            $("#milista").fadeIn();
+            $lista.fadeIn();
         });
         $("#ocultarmostrar").click(function(e) {
-            $("#milista").fadeOut(function() {
+            $lista.fadeOut(function() {
                 $(this).fadeIn();
             });
         });

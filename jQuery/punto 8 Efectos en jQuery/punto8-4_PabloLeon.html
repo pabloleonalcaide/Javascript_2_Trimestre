@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <title>Pablo Leon - Cola de efectos por defecto en jQuery</title>
@@ -18,7 +18,7 @@
     }
     </style>
     <script languague="javascript">
-    function colaEfectos() {
+    let colaEfectos =() => {
         capa = $("#micapa");
         capa.animate({
             "font-size": "1.5em"
@@ -37,9 +37,7 @@
             "top": "20px"
         }, 1500, colaEfectos);
     }
-    $(document).ready(function() {
-        colaEfectos();
-    });
+    $(colaEfectos);
     </script>
 </head>
 

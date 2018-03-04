@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <script src="../jquery-3.2.1.js"></script>
         <script languague="javascript">
-        jQuery.fn.checkboxPersonalizado = function(opciones) {
+        $.fn.checkboxPersonalizado = function(opciones) {
             //opciones de configuración por defecto
             let conf = {
                 activo: true,
@@ -17,10 +17,6 @@
                 textos: {
                     activo: "",
                     pasivo: ""
-                },
-                imagen: {
-                    activo: 'images/thumb_up.png',
-                    pasivo: 'images/thumb_down.png'
                 },
                 cssElemento: {
                     padding: "2px 2px 2px 24px",
@@ -35,7 +31,7 @@
                 nameCheck: ""
             };
             //Las extiendo con las opciones recibidas al invocar el plugin
-            jQuery.extend(conf, opciones);
+            $.extend(conf, opciones);
 
             this.each(function() {
                 let miCheck = $(this);
@@ -67,7 +63,7 @@
                 function desactivar() {
                 	//modificamos el css con la configuración para estado pasivo
                     miCheck.css({
-                        background: "transparent url(" + conf.imagen.pasivo + ") no-repeat 3px",
+                        background: "transparent",
                         color: conf.colorTextos.pasivo
                     });
                     // introducimos el texto con la configuración para estado pasivo
@@ -80,7 +76,7 @@
 
                 function activar() {
                     miCheck.css({
-                        background: "transparent url(" + conf.imagen.activo + ") no-repeat 3px",
+                        background: "transparent",
                         color: conf.colorTextos.activo
                     });
                     if (conf.textos.activo != "") {
@@ -92,17 +88,13 @@
             return this;
         };
 
-        $(document).ready(function() {
+        $(function() {
             $(".ch").checkboxPersonalizado();
             $("#otro").checkboxPersonalizado({
                 activo: false,
                 colorTextos: {
                     activo: "#f80",
                     pasivo: "#98a"
-                },
-                imagen: {
-                    activo: 'images/weather_cloudy.png',
-                    pasivo: 'images/weather_rain.png'
                 },
                 textos: {
                     activo: 'Buen tiempo :)',
@@ -117,10 +109,7 @@
         })
         </script>
         <style type="text/css">
-        body {
-            font-family: tahoma, verdana, arial;
-            font-size: 10pt;
-        }
+	        body { font-size: 10pt;}
         </style>
     </head>
 

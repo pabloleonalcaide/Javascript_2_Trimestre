@@ -7,10 +7,7 @@
 <meta charset="utf-8">
 <script src="../jquery-3.2.1.js" type="text/javascript"></script>	
 <style type="text/css">
-body{
-	font-size: 0.75em;
-	font-family: tahoma, verdana, sans-serif;
-}
+
 #micapa{
 	margin-top: 20px;
 	width: 400px;
@@ -22,12 +19,11 @@ body{
 	left: 300px;
 	position: absolute;
 }
-button.botondetener{
-	display: none;
-}
+button.botondetener{ display: none; }
 </style>
 <script languague="javascript">
-$(document).ready(function(){
+let capa;
+$(function(){
 	$("#botoncomenzar").click(function(){
 		capa = $("#micapa");
 		capa.queue(function(continua){
@@ -42,18 +38,15 @@ $(document).ready(function(){
 			continua();
 		});
 	});
-	$("#botonparar").click(function(){
-		$("#micapa").stop();
-	});
+	$("#botonparar").click(function(){ capa.stop(); });
 	$("#botonpararllegar").click(function(){
-		$("#micapa").stop(false, true);
+		capa.stop(false, true);
 	});
 	$("#botonparartodo").click(function(){
-		$("#micapa").queue([]);
-		$("#micapa").stop();
-		//Esto mismo podría haberse hecho también así: $("#micapa").stop(true);
-		
-		alert("Lo he parado todo!, ni se ocultarán los botones de parar. Pasos encolados: " + $("#micapa").queue().length)
+		capa.queue([]);
+		capa.stop();
+		//Esto mismo podría haberse hecho también así: $("#micapa").stop(true);	
+		alert("Lo he parado todo!, ni se ocultarán los botones de parar. Pasos encolados: " + capa.queue().length)
 	});
 });
 </script>

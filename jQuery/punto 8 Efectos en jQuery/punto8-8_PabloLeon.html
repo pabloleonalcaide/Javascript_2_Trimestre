@@ -2,7 +2,7 @@
 El método delay() de jQuery sirve para generar un intervalo de espera entre la ejecución de funciones de 
 la cola de efectos
 -->
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML>
 <html lang="es">
 
 <head>
@@ -14,7 +14,7 @@ la cola de efectos
         left: 20px;
         top: 20px;
         position: absolute;
-        font-size: 0.75em;
+        font-size: 14px;
         font-family: tahoma, verdana, sans-serif;
         width: 740px;
         background-color: #ddf;
@@ -34,9 +34,7 @@ la cola de efectos
             "font-size": "+=0.5em"
         }, 1000, colaEfectos);
     }
-    $(document).ready(function() {
-        colaEfectos();
-    });
+    $(colaEfectos);
     </script>
 </head>
 
