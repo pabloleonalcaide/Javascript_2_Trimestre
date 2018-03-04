@@ -13,27 +13,18 @@
 		$nombre = $('#nombrePonente');
 		$apellidos = $('#apellidosPonente');
 		$empresa = $('#empresaPonente');
-		$fecha1 = $( "#datepicker");
-		$fecha2 = $( "#datepicker2");
+		$fechas = $( ".fechas");
 		$spanNombre = $('#errNombrePonente');
 		$spanApellidos = $('#errApellidosPonente');
 		$spanEmpresa = $('#errEmpresaPonente');
 		$enviar = $('#submit');
 		$( "#dialog-message" ).dialog({ autoOpen: false });
-		$fecha1.datepicker({
+		$fechas.datepicker({
 			dateFormat: 'dd-mm-yy',
-			minDate: new Date(2018, 1 - 1, 25),
-			maxDate: new Date(2018, 1 - 1, 29),
+			minDate: new Date(2018, 0, 25),
+			maxDate: new Date(2018, 1, 2),
 			firstDay: 1,
-			showOtherMonths: true,
-			showAnim: "drop"
-		});
-		$fecha2.datepicker({
-			dateFormat: 'dd-mm-yy',
-			minDate: new Date(2018, 1 - 1, 25),
-			maxDate: new Date(2018, 1 - 1, 29),
-			firstDay: 1,
-			showOtherMonths: true,
+			numberOfMonths: 2,
 			showAnim: "drop"
 		});
 		$nombre.blur(function(event){validar($(this),$spanNombre)});
@@ -72,15 +63,15 @@
 	* Lanza el cuadro de diálogo confirmando los cambios
 	*/
 	let confirmar = ()=>{
-		 $( "#dialog-message" ).dialog("open");
+		$( "#dialog-message" ).dialog("open");
     	$( "#dialog-message" ).dialog({
     	  modal: true,
-    	  buttons: {
-    	    Ok: function() {
-        	  $( this ).dialog( "close" );
-        }
-      }
-  });
+    	  	buttons: {
+    	    	Ok: function() {
+        	  		$( this ).dialog( "close" );
+        		}
+      		}
+  		});
 	}
 $(init);
 }

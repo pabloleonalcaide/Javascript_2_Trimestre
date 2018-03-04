@@ -1,6 +1,5 @@
 {
-	let callback = () =>{
-	}
+	let callback = () =>{}
 	let $lista;
 	let $ponentes;
 	let init = ()=>{
@@ -31,8 +30,7 @@
 		$.each(datos,function(key,value){
 		let $div = $('<div class="ponente"></div>')
 		let $imagen = $('<img>').prop('src',value.imagen);
-		let $enlace =  $('<a data-lightbox="roadtrip"></a>').prop("href",value.imagen);
-		$enlace.append($imagen);
+		let $enlace =  $('<a data-lightbox="roadtrip"></a>').prop("href",value.imagen).append($imagen);
 		let $ponente = $('<p></p>').html(value.ponente);
 		$div.append($enlace,$ponente);
 		$lista.append($div);

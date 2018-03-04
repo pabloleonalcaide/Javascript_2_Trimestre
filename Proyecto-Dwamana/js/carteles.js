@@ -1,15 +1,14 @@
 {
-	$.fn.clarify = function() {
-    	this.css( "opacity", "0.7" );
-	};
+
 	$.fn.solidify = function() {
     	this.hover(function(){$(this).css( "opacity", "1" )});
+    	this.mouseout(function(){$(this).css( "opacity", "0.7" )});
+    	return this;
 	};
 	let $div;
 	let init = ()=>{
 		$div = $('#panelCarteles');		
 		mostrarCarteles();
-		$('.cartel').clarify();
 		$('.cartel').solidify();
 
 	}

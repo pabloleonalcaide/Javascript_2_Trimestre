@@ -43,7 +43,7 @@
 	 }
 	 /* Valida el input de dni */
 	 let validarDni = (event)=>{
-		let pattern =  /^\d{8}[\s-]?[a-zA-Z]$/ ;
+		let pattern =  /^\d{8}[-]?[a-zA-Z]$/ ;
 		(pattern.test(event.val())) ? validarLetraDni(event.val()) : $spanDni.html("Formato incorrecto");		
 	 }
 	 /* Valida que la letra del dni sea correcta*/
@@ -53,6 +53,8 @@
 		let letters = ['t','r','w','a','g','m','y','f','p','d','x','b','n','j','z','s','q','v','h','l','c','k','e'];
 		if(letter!=letters[number%23])
 			$spanDni.html("Letra incorrecta");
+		else 
+			$spanDni.html("");
 	 }
 	 /* Valida el input de email*/
 	 let validarMail = (event)=>{
@@ -71,14 +73,14 @@
 		validarDni($dni);
 		validarMail($mail);
 		validarProcedencia($procedencia);
-		if(validarTodo())
+		if(!validarTodo())
 			confirmar();
 	 }
 	 /* Hace la validación de todos los imputs*/
 	 let validarTodo = ()=>{
 	 	let error = false;
 		$('#formRegister span').each(function(i){
-			if($(this).val() !="")
+			if($(this).html() !="")
 				error = true;
 		});
 		return error;
