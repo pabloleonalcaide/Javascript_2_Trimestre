@@ -2,6 +2,9 @@
 
 Ejercicios de jQuery del manual de desarrolloweb.com 
 
+Algunos de los ejercicios han sido modificados para su correcto funcionamiento, en otros casos se ha inhabilitado su funcionalidad para mantenerlos simplemente
+como código de referencia o ejemplo. El manual está considerablemente anticuado, por lo que en muchos casos el código será poco eficiente, contendrá funciones 'deprecated' y otros problemas. En resumidas cuentas, el material necesita una actualización completa
+
 * Demo 1
 * Demo 2
 * 1.3 Manejando evento en una etiqueta <a>

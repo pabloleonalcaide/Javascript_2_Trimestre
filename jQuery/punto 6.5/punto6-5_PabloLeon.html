@@ -5,7 +5,7 @@
     <title>Pablo Leon - Trabajando con eventos de teclado en jQuery</title>
     <script src="../jquery-3.2.1.js"></script>
     <script>
-    $(document).ready(function() {
+    $(function() {
         $("#mitexto").keypress(function(e) { //el evento se dispara al presionar una tecla sin importar si es liberada o no
             e.preventDefault();
             $("#loescrito").html(e.which + ": " + String.fromCharCode(e.which)) //convertimos de unicode a caracter normal (e.which nos indica cual fue la tecla que lo disparó)

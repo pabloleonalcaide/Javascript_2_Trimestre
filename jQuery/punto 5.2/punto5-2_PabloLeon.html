@@ -5,9 +5,9 @@
     <title>Pablo Leon - Funciones CSS en jQuery</title>
     <script src="../jquery-3.2.1.js"></script>
     <script type="application/x-javascript">
-    function dimensionCapa(capa) {
-        capa = $(capa);
-        var dimensiones = "";
+    var capa;
+    let dimensionCapa = (capa) =>{
+        let dimensiones = "";
         dimensiones += "Dimensiones internas: " + capa.innerWidth() + "x" + capa.innerHeight();
         dimensiones += "\nDimensiones externas: " + capa.outerWidth() + "x" + capa.outerHeight();
         alert(dimensiones);
@@ -15,14 +15,15 @@
 
     function posicionCapa(capa) {
         capa = $(capa);
-        var posicion = "";
+        let posicion = "";
         posicion += "Posición relativo al documento:\nLEFT: " + capa.offset().left + "\nTOP:" +
         capa.offset().top;
         posicion += "\n\nPosición si no tuviera margen:\nLEFT: " + capa.position().left + "\nTOP:" +
             capa.position().top;
         alert(posicion);
     }
-    $(document).ready(function() {
+    $(function() {
+        capa = $(capa);
         $("#botondimensiones").click(function() {
             dimensionCapa("#capa1");
         });

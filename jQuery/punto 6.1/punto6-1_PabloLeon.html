@@ -7,14 +7,16 @@
     <script>
     let numClics = 0;
     let numDobleClics = 0;
-    $(document).ready(function() {
+    $mensaje;
+    $(function() {
+        $mensaje= $('#mensaje');
         $("#micapa").dblclick(function(e) {
             numDobleClics++;
-            $("#mensaje").html("Doble Clic " + numDobleClics);
+            $mensaje.html("Doble Clic " + numDobleClics);
         });
         $("#micapa").click(function(e) {
             numClics++;
-            $("#mensaje").html("Clic " + numClics);
+            $mensaje.html("Clic " + numClics);
         });
     })
     </script>
@@ -22,8 +24,7 @@
 
 <body>
     <h1>Trabajando con eventos en jQuery</h1>
-    <div id="micapa" style="padding: 10px; background-color: #ffcc99; width: 150px; float: 
-left;">Hazme dobleclick</div>
+    <div id="micapa" style="padding: 10px; background-color: #ffcc99; width: 150px; float: left;">Hazme dobleclick</div>
     <div id="mensaje" style="padding: 10px; margin-left: 180px;">Aquí voy a colocar mensajes para que los leas...</div>
 </body>
 

@@ -5,11 +5,13 @@
     <title>Pablo Leon - Método jQuery CSS</title>
 	<script language="javascript" type="text/javascript" src="../jquery-3.2.1.js"></script>
 	<script language="javascript">
-		$(document).ready(function(){
+		var $micapa;
+		$(function(){
+			$micapa = $('#micapa');
 			//modificando un atributo css
-			$("#micapa").css("color", "green");
+			micapa.css("color", "green");
 			//modificando múltiples atributos css
-			$("#micapa").css({
+			micapa.css({
 				"background-color": "#ff8800",
 				"position": "absolute",
 				"width": "100px",
@@ -19,17 +21,17 @@
 			
 			$("#fondogris").click(function(e){
 				e.preventDefault();
-				$("#micapa").css("background-color","#999");
+				micapa.css("background-color","#999");
 			})
 			
 			$("#fondonaranja").click(function(e){
 				e.preventDefault();
-				$("#micapa").css("background-color","#f80");
+				micapa.css("background-color","#f80");
 			})
 			
 			$("#ocultarmostrar").click(function(e){
 				e.preventDefault();
-				let c = $("#micapa");
+				let c = micapa;
 				let mostrandose = c.css("display");
 				if (mostrandose=="block"){
 					c.css("display", "none");
@@ -38,12 +40,12 @@
 				}
 			})
 			
-			$("#micapa").mouseover(function(){
+			$micapa.mouseover(function(){
 				antiguoLeft = parseInt($(this).css("left"));
 				$(this).css("left", antiguoLeft + 10 + "px");
 			})
 			
-			$("#micapa").click(function(){
+			$micapa.click(function(){
 				$(this).css("width", function(index, value){
 					let aumento = prompt("cuanto quieres aumentar?", "25");
 					return (parseInt(value) + parseInt(aumento)) + "px";

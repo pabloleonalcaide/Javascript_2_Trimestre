@@ -8,22 +8,21 @@ selector, en el momento actual o en el futuro -->
     <meta charset="utf-8">
     <title>Eventos live</title>
     <style type="text/css">
-    .verde { color: green;}
+        .verde { color: green;}
     </style>
     <script src="../jquery-3.2.1.js"></script>
     <script language="javascript">
-    $(document).ready(function() {  //EL MÉTODO LIVE() FUE ELIMINADO EN LA VERSIÓN 1.9 
+    $(function() {  //EL MÉTODO LIVE() FUE ELIMINADO EN LA VERSIÓN 1.9 
        /* $(".verde").live("click", function(e) {
             let elem = $(this);
-            if (elem.html() != "Hiciste clic!!") {
+            if (elem.html() != "Hiciste clic!!")
                 elem.html("Hiciste clic!!");
-            } else {
+            else
                 elem.html("Hiciste de nuevo clic!!");
-            }
         })
         $("#insertarelem").click(function(e) {
             let nuevoElemento = $('<div class="verde">Este elemento se ha creado e insertado dinamicamente(haz clic)</div>');
-            nuevoElemento.appendTo($(document.body));
+            nuevoElemento.appendTo($('body'));
         });
         $("#ponerclaseverde").click(function(e) {
             $("#noverde").addClass("verde");

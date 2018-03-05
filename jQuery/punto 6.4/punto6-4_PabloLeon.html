@@ -1,5 +1,4 @@
 <html>
-
 <head>
 	<meta charset="utf-8">
     <title>Pablo Leon - Trabajando con eventos - Tip simple</title>
@@ -13,19 +12,15 @@
     </style>
     <script src="../jquery-3.2.1.js"></script>
     <script>
-    $(document).ready(function() {
+    $(function() {
         $("#elemento1").mouseenter(function(e) {
-            $("#tip1").css("left", e.pageX + 5);
-            $("#tip1").css("top", e.pageY + 5);
-            $("#tip1").css("display", "block");
+            $("#tip1").css({"left": e.pageX + 5,"top" : e.pageY + 5, "display":  "block"});
         });
         $("#elemento1").mouseleave(function(e) {
             $("#tip1").css("display", "none");
         });
         $("#elemento2").mouseenter(function(e) {
-            $("#tip2").css("left", e.pageX + 5);
-            $("#tip2").css("top", e.pageY + 5);
-            $("#tip2").css("display", "block");
+            $("#tip2").css({"left": e.pageX + 5,"top" : e.pageY + 5, "display":  "block"});
         });
         $("#elemento2").mouseleave(function(e) {
             $("#tip2").css("display", "none");

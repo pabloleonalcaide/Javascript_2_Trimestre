@@ -4,7 +4,7 @@ bind(tipo_de_evento, manejador)
 -Como primer parámetro enviamos el tipo de evento que queremos definir. Si se desea, podríamos especificar varios tipos de eventos separados por un espacio y así asignar un mismo manejador de evento para varios tipos de situaciones. 
 -Como segundo parámetro se indica el manejador o función a ejecutar cuando se produzca el evento, igual que se definía con los métodos click(), mouseleave() o similares, para un tipo de evento en concreto. 
 -->
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML>
 <html lang="es">
 
 <head>
@@ -12,29 +12,28 @@ bind(tipo_de_evento, manejador)
     <title>Eventos bind</title>
     <script src="../jquery-3.2.1.js"></script>
     <script language="javascript">
-    $(document).ready(function() {
-        $("p").bind("click mouseenter mouseleave", function(e) {
-            if ($(this).css("color") != "rgb(250, 100, 0)")
-                $(this).css("color", "rgb(250, 100, 0)");
-            else
-                $(this).css("color", "rgb(150, 0, 255)");
+        $(function() {
+            $("p").bind("click mouseenter mouseleave", function(e) {
+                if ($(this).css("color") != "rgb(250, 100, 0)")
+                    $(this).css("color", "rgb(250, 100, 0)");
+                else
+                    $(this).css("color", "rgb(150, 0, 255)");
+            })
+            function clicAlerta() {
+                alert("Has hecho clic");
+            }
+            $(".miclase").bind("click", clicAlerta);
+            $("#quitarevento").bind("click", function() {
+                $(".miclase").unbind("click", clicAlerta);
+            })
         })
-
-        function clicAlerta() {
-            alert("Has hecho clic");
-        }
-        $(".miclase").bind("click", clicAlerta);
-        $("#quitarevento").bind("click", function() {
-            $(".miclase").unbind("click", clicAlerta);
-        })
-    })
     </script>
 </head>
 
 <body>
     <p class="miclase">Primer párrafo</p>
     <p>Otro párrafo</p>
-    <input type=button value="Quitar el alert del clic del primer párrafo" id="quitarevento">
+    <input type=button value="Quitar el alert del click del primer párrafo" id="quitarevento">
 </body>
 
 </html>

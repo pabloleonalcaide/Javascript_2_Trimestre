@@ -21,7 +21,7 @@
     </style>
     <script src="../jquery-3.2.1.js"></script>
     <script>
-    jQuery.fn.creaTip = function(textoTip, opciones) {
+    $.fn.creaTip = function(textoTip, opciones) {
 		
 		//creamos nuestro objeto de configuración con valores por defecto
         let configuracion = {
@@ -31,7 +31,7 @@
             claseTip: "tip"
         }
         //toma todos los valores del objeto opciones y los almacena en configuracion
-        jQuery.extend(configuracion, opciones);
+        $.extend(configuracion, opciones);
 
         this.each(function() {
             elem = $(this);

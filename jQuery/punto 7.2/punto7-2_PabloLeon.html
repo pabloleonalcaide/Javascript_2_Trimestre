@@ -5,16 +5,14 @@
     <title>Pablo Leon - Creando plugins en jQuery</title>
     <script src="../jquery-3.2.1.js"></script>
     <script>
-    jQuery.fn.parpadea = function() {
+    $.fn.parpadea = function() {
         this.each(function() {
             elem = $(this);
-            elem.fadeOut(250, function() {
-                $(this).fadeIn(250);		//encadena la función fadeIn(ms) al finalizar fadeOut(ms)
-            });
+            elem.fadeOut(250).fadeIn(250);       //encadena la función fadeIn(ms) al finalizar fadeOut(ms);
         });
         return this;
     };
-    $(document).ready(function() {
+    $(function() {
         //parpadean los elementos de class CSS "parpadear"
         $(".parpadear").parpadea();
         //añado un evento clic para un botón, para que al pulsarlo parpadeen los elementos de clase parpadear
@@ -31,9 +29,7 @@
     <p class="parpadear">Sí parpadea</p>
     <p>Parafo normal que no va a parpadear tampoco...</p>
     <div class="parpadear" style="background-color: #ff9966; padding: 10px;">Esta capa también tiene la clase parpadear, con lo que ya se sabe...</div>
-    <p>
-        <input type="button" value="Parpadea de nuevo" id="botonparpadear">
-    </p>
+    <p><input type="button" value="Parpadea de nuevo" id="botonparpadear"></p>
 </body>
 
 </html>
