@@ -42,13 +42,12 @@
     let insertCircle = function() {
         clickedColor = this.id;
         $circlesToFill.each(function(index,element){
-
             if (isEmptyCircle(element.style.backgroundColor)) {
                 element.style.backgroundColor = clickedColor;
                 $(element).on("click", clean);
                 return false;
             }
-        })
+        });
         if (counter < 4)
             counter++;
     }
@@ -63,8 +62,6 @@
         let $rowCirclesToCheck = $('<div id="circlesToCheck"></div>');
         $newRow.append($rowCirclesToFill,$rowCirclesToCheck);
 
-        let $emptyCircle;
-        let $checkCircle;
         for (let i = 0; i < 4; i++) {
             $rowCirclesToFill.append($('<div class="circleFill circleFill'+linesCount+'"></div>'));
         }
@@ -128,7 +125,6 @@
     let openWinnerDialog = ()=>{
         $( "#dialog" ).dialog("open");
                     $( "#dialog" ).dialog({
-                          resizable: false,
                           height: "auto",
                           width: 420,
                           modal: true,
