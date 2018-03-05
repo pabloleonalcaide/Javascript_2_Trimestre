@@ -11,9 +11,7 @@ mastermind = (function () {
 /**
  * init the game by generating a new combination
  */
-    let init = function () {
-        generateTarget();
-    }
+    let init = () =>{ generateTarget()}
 
 /**
  * check if user hits the play
@@ -48,7 +46,7 @@ mastermind = (function () {
     }
 
 /**
- * Shows the combination
+ * Shows the combination in console
  */
     let mostrar = function () {
         console.log(target);

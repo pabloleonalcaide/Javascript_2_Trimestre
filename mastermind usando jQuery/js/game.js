@@ -7,7 +7,6 @@
     let linesCount;
     let $circlesToFill;
     let $circlesToCheck;
-
     /** 
     * start a new game
     * @see mastermind.js
@@ -31,8 +30,8 @@
         generateNewLine();
     }
 
-    let isEmptyCircle = (circle)=>{
-        if(circle.style.backgroundColor == "transparent" || circle.style.backgroundColor == "" ||circle.style.backgroundColor == "none")
+    let isEmptyCircle = (color)=>{
+        if(color == "transparent" || color == "" ||color == "none")
             return true
         return false
 
@@ -44,10 +43,10 @@
         clickedColor = this.id;
         $circlesToFill.each(function(index,element){
 
-        if (isEmptyCircle(element)) {
-            element.style.backgroundColor = clickedColor;
-            $(element).on("click", clean);
-            return false;
+            if (isEmptyCircle(element.style.backgroundColor)) {
+                element.style.backgroundColor = clickedColor;
+                $(element).on("click", clean);
+                return false;
             }
         })
         if (counter < 4)
@@ -62,17 +61,15 @@
         $('#playPanel').append($newRow);
         let $rowCirclesToFill = $('<div id="circlesToFill"></div>');
         let $rowCirclesToCheck = $('<div id="circlesToCheck"></div>');
-        $newRow.append($rowCirclesToFill).append($rowCirclesToCheck);
+        $newRow.append($rowCirclesToFill,$rowCirclesToCheck);
 
         let $emptyCircle;
         let $checkCircle;
         for (let i = 0; i < 4; i++) {
-            $emptyCircle = $('<div class="circleFill circleFill'+linesCount+'"></div>');
-            $rowCirclesToFill.append($emptyCircle);
+            $rowCirclesToFill.append($('<div class="circleFill circleFill'+linesCount+'"></div>'));
         }
         for (let i = 0; i < 4; i++) {
-            $checkCircle = $('<div class="circleCheck circleCheck'+linesCount+'"></div>');
-            $rowCirclesToCheck.append($checkCircle);
+            $rowCirclesToCheck.append($('<div class="circleCheck circleCheck'+linesCount+'"></div>'));
         }
 
         counter = 0;
